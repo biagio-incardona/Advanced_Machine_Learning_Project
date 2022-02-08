@@ -56,8 +56,8 @@ class TFIDFDecisionTreeClassifier(DecisionTreeClassifier):
                  min_impurity_decrease=0.0,
                  class_weight=None,
                  ccp_alpha=0.0):
-        if max_depth != None and max_depth < 0: max_depth = None
-        if max_leaf_nodes != None and max_leaf_nodes < 0: max_leaf_nodes = None
+        if max_depth != None and max_depth <= 0: max_depth = None
+        if max_leaf_nodes != None and max_leaf_nodes <= 0: max_leaf_nodes = None
         super().__init__(criterion=criterion, splitter=splitter, max_depth=max_depth, min_samples_split=min_samples_split,
                         min_samples_leaf=min_samples_leaf,
                         min_weight_fraction_leaf=min_weight_fraction_leaf,
