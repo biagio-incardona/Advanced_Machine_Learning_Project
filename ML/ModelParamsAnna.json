@@ -1,0 +1,4182 @@
+{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 1.9978971168445274,
+    "model__epochs": 24,
+    "model__min_count": 5,
+    "model__vector_size": 3623,
+    "model__window": 2
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.7134793693123733,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.6680562944140255,
+    "model__max_iter": 913,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 19819468,
+    "model__tol": 0.00026622166660041427
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 6.865899052789083,
+    "model__criterion": "entropy",
+    "model__max_depth": 7,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 999,
+    "model__min_impurity_decrease": 4.392761198904285,
+    "model__min_samples_leaf": 6,
+    "model__min_samples_split": 10,
+    "model__min_weight_fraction_leaf": 0.4213927274100374,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 19119240
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.28992198575616157,
+    "model__dual": false,
+    "model__intercept_scaling": 5.8161661743498945,
+    "model__max_iter": 1006,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 45532913,
+    "model__tol": 0.0003311511668684144
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.1072954561086756,
+    "model__dual": false,
+    "model__intercept_scaling": 6.335643682049935,
+    "model__max_iter": 1042,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 13862948,
+    "model__tol": 0.0007650159436968374
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.12565540907064957,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.11054611441984019,
+    "model__max_iter": 225,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 18022176,
+    "model__tol": 0.0003085011434716844
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 24,
+    "model__min_count": 10,
+    "model__vector_size": 5543,
+    "model__window": 5
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 5.461510218152942,
+    "model__criterion": "entropy",
+    "model__max_depth": 1,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 850,
+    "model__min_impurity_decrease": 3.176010476506901,
+    "model__min_samples_leaf": 1,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.0768232867375444,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 45352486
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.31468664535519186,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.48237825847288973,
+    "model__max_iter": 862,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 32713652,
+    "model__tol": 0.000633763746459904
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.2676126362800175,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.08529290669845979,
+    "model__max_iter": 800,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 26768722,
+    "model__tol": 0.00023398168267961794
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.491639800356534,
+    "model__dual": false,
+    "model__intercept_scaling": 0.5875566655501262,
+    "model__max_iter": 1976,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 34440268,
+    "model__tol": 0.0009978641854213697
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.013208333616516,
+    "model__dual": false,
+    "model__intercept_scaling": 3.697871461480482,
+    "model__max_iter": 1900,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 39883861,
+    "model__tol": 0.00018329135043790244
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.8849293487544193,
+    "model__dual": false,
+    "model__intercept_scaling": 5.5718658099347795,
+    "model__max_iter": 1603,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 3878421,
+    "model__tol": 0.0010008599098780744
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 6.563836666220327,
+    "model__criterion": "entropy",
+    "model__max_depth": 10,
+    "model__max_features": "sqrt",
+    "model__max_leaf_nodes": 358,
+    "model__min_impurity_decrease": 3.3348896346962817,
+    "model__min_samples_leaf": 19,
+    "model__min_samples_split": 9,
+    "model__min_weight_fraction_leaf": 0.19463639610262773,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "best",
+    "model__tfidf_max_features": 42354945
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.820416447045609,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 26539429
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 2.054643041085602,
+    "model__epochs": 21,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.2663130758984277,
+    "model__max_iter": 637,
+    "model__min_count": 1,
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tol": 0.00030231652956670755,
+    "model__vector_size": 6213,
+    "model__window": 4
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.3409798334073041,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.1495978879295714,
+    "model__max_iter": 329,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 25017749,
+    "model__tol": 0.0003636245094477392
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.8378495527261468,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.30264751102005827,
+    "model__max_iter": 749,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 35813202,
+    "model__tol": 0.0008808860958013861
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.262124926468022,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 26256406
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 0.9990549201412158,
+    "model__criterion": "entropy",
+    "model__max_depth": 10,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 59,
+    "model__min_impurity_decrease": 0.8267795287959889,
+    "model__min_samples_leaf": 7,
+    "model__min_samples_split": 5,
+    "model__min_weight_fraction_leaf": 0.09020769033541653,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 31776970
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.5444470109486959,
+    "model__dual": false,
+    "model__intercept_scaling": 2.9324467059077883,
+    "model__max_iter": 1137,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 8039546,
+    "model__tol": 0.0004659842554575604
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.2665937922091535,
+    "model__dual": false,
+    "model__intercept_scaling": 8.245481094897974,
+    "model__max_iter": 493,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 21405901,
+    "model__tol": 3.9095382788175476e-05
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.6891753123430827,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 42173662
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.171035197370021,
+    "model__epochs": 20,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.2592979284424757,
+    "model__max_iter": 251,
+    "model__min_count": 2,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.00038026898142983493,
+    "model__vector_size": 383,
+    "model__window": 1
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.311370717746004,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 10503251
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.11179343188677784,
+    "model__dual": false,
+    "model__epochs": 10,
+    "model__intercept_scaling": 3.0149957040946727,
+    "model__max_iter": 263,
+    "model__min_count": 10,
+    "model__penalty": "l1",
+    "model__tol": 0.0009090794699215749,
+    "model__vector_size": 8129,
+    "model__window": 8
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 7,
+    "model__min_count": 1,
+    "model__vector_size": 2538,
+    "model__window": 3
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.21821166101549686,
+    "model__dual": false,
+    "model__epochs": 7,
+    "model__intercept_scaling": 8.786070898571765,
+    "model__max_iter": 615,
+    "model__min_count": 8,
+    "model__penalty": "l1",
+    "model__tol": 0.0007302726674458155,
+    "model__vector_size": 2488,
+    "model__window": 9
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 6,
+    "model__min_count": 9,
+    "model__vector_size": 7816,
+    "model__window": 9
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.4341442586930784,
+    "model__dual": false,
+    "model__intercept_scaling": 4.671604787996678,
+    "model__max_iter": 842,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 45399486,
+    "model__tol": 0.000981792351066238
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 10,
+    "model__min_count": 3,
+    "model__vector_size": 6830,
+    "model__window": 9
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 4.984948739869891,
+    "model__epochs": 21,
+    "model__min_count": 8,
+    "model__vector_size": 3225,
+    "model__window": 5
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 15814371
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 4,
+    "model__vector_size": 4598,
+    "model__window": 3
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 6.2393980603816015,
+    "model__criterion": "gini",
+    "model__max_depth": 2,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 444,
+    "model__min_impurity_decrease": 4.519018826599391,
+    "model__min_samples_leaf": 10,
+    "model__min_samples_split": 9,
+    "model__min_weight_fraction_leaf": 0.18251614766862279,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 10967151
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.5104512873645426,
+    "model__dual": false,
+    "model__intercept_scaling": 4.9995198847925995,
+    "model__max_iter": 1986,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 11759556,
+    "model__tol": 0.00010730711705354777
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.2802116973679858,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.939100096274339,
+    "model__max_iter": 121,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 41500552,
+    "model__tol": 0.0008243163590465835
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.7977264576958024,
+    "model__epochs": 8,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.4568317579074219,
+    "model__max_iter": 705,
+    "model__min_count": 8,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.0006659885030624311,
+    "model__vector_size": 2744,
+    "model__window": 6
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.36961368604878964,
+    "model__dual": false,
+    "model__epochs": 15,
+    "model__intercept_scaling": 9.109856194549433,
+    "model__max_iter": 1683,
+    "model__min_count": 1,
+    "model__penalty": "l1",
+    "model__tol": 3.4310005923007475e-05,
+    "model__vector_size": 8762,
+    "model__window": 3
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.6658763500943354,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.5654940242767432,
+    "model__max_iter": 966,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 47077861,
+    "model__tol": 0.000633676344343496
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.2900573893677191,
+    "model__dual": false,
+    "model__intercept_scaling": 8.72067063553136,
+    "model__max_iter": 851,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 9445298,
+    "model__tol": 0.0007465111718000982
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 0.027966326171781075,
+    "model__epochs": 21,
+    "model__min_count": 5,
+    "model__vector_size": 1204,
+    "model__window": 6
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 5.6488166370911745,
+    "model__criterion": "gini",
+    "model__max_depth": 4,
+    "model__max_features": "auto",
+    "model__max_leaf_nodes": 326,
+    "model__min_impurity_decrease": 6.33524553542799,
+    "model__min_samples_leaf": 10,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.34606568800845483,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 45122953
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.7240896170805378,
+    "model__dual": false,
+    "model__epochs": 13,
+    "model__intercept_scaling": 4.846044750060004,
+    "model__max_iter": 266,
+    "model__min_count": 4,
+    "model__penalty": "l1",
+    "model__tol": 0.0006989658154552298,
+    "model__vector_size": 2841,
+    "model__window": 10
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 14,
+    "model__min_count": 4,
+    "model__vector_size": 2285,
+    "model__window": 5
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 22,
+    "model__min_count": 3,
+    "model__vector_size": 1252,
+    "model__window": 2
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.5005992384217508,
+    "model__dual": false,
+    "model__intercept_scaling": 3.291069981930268,
+    "model__max_iter": 793,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 29664534,
+    "model__tol": 0.00025000645113336476
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 1.4709621881360724,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 42357378
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 17,
+    "model__min_count": 3,
+    "model__vector_size": 3796,
+    "model__window": 9
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 3.970203814959058,
+    "model__criterion": "gini",
+    "model__max_depth": 8,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 363,
+    "model__min_impurity_decrease": 8.054571432550038,
+    "model__min_samples_leaf": 1,
+    "model__min_samples_split": 16,
+    "model__min_weight_fraction_leaf": 0.03872415170949961,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 33015752
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 0.6142557355377221,
+    "model__epochs": 6,
+    "model__min_count": 8,
+    "model__vector_size": 5031,
+    "model__window": 9
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 14,
+    "model__min_count": 8,
+    "model__vector_size": 4045,
+    "model__window": 5
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 1.4364911618782295,
+    "model__criterion": "entropy",
+    "model__max_depth": 2,
+    "model__max_features": "auto",
+    "model__max_leaf_nodes": 862,
+    "model__min_impurity_decrease": 2.564049108752735,
+    "model__min_samples_leaf": 8,
+    "model__min_samples_split": 19,
+    "model__min_weight_fraction_leaf": 0.38676311174491795,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "best",
+    "model__tfidf_max_features": 2157855
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 20,
+    "model__min_count": 7,
+    "model__vector_size": 2105,
+    "model__window": 2
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 3.6935405106850574,
+    "model__criterion": "entropy",
+    "model__max_depth": 3,
+    "model__max_features": "auto",
+    "model__max_leaf_nodes": 729,
+    "model__min_impurity_decrease": 6.49729230935085,
+    "model__min_samples_leaf": 11,
+    "model__min_samples_split": 10,
+    "model__min_weight_fraction_leaf": 0.2367606670230903,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 34719219
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 8.080992300262077,
+    "model__criterion": "gini",
+    "model__max_depth": 4,
+    "model__max_features": "sqrt",
+    "model__max_leaf_nodes": 269,
+    "model__min_impurity_decrease": 5.015254253642885,
+    "model__min_samples_leaf": 17,
+    "model__min_samples_split": 12,
+    "model__min_weight_fraction_leaf": 0.18022966968164983,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "best",
+    "model__tfidf_max_features": 36645139
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 6,
+    "model__min_count": 1,
+    "model__vector_size": 8742,
+    "model__window": 3
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.975486946508351,
+    "model__epochs": 25,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.6978768690321983,
+    "model__max_iter": 228,
+    "model__min_count": 9,
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tol": 0.00047906831701674817,
+    "model__vector_size": 6199,
+    "model__window": 9
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 1908197
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.13291496604992292,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 49841364
+}
+{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.590290995152243,
+    "model__epochs": 16,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.08862520480290692,
+    "model__max_iter": 536,
+    "model__min_count": 4,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0008154550415877287,
+    "model__vector_size": 3765,
+    "model__window": 10
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.08759815813145,
+    "model__dual": false,
+    "model__epochs": 9,
+    "model__intercept_scaling": 2.693665984475624,
+    "model__max_iter": 254,
+    "model__min_count": 8,
+    "model__penalty": "l2",
+    "model__tol": 0.0005525492035743556,
+    "model__vector_size": 9625,
+    "model__window": 2
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 8.865463742308574,
+    "model__criterion": "gini",
+    "model__epochs": 12,
+    "model__max_depth": 7,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 779,
+    "model__min_count": 2,
+    "model__min_impurity_decrease": 3.172354663524949,
+    "model__min_samples_leaf": 18,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.4532163378877864,
+    "model__splitter": "best",
+    "model__vector_size": 1586,
+    "model__window": 2
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 5,
+    "model__vector_size": 9630,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.8714105783776714,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 7.632456139600638,
+    "model__max_iter": 364,
+    "model__min_count": 4,
+    "model__penalty": "l1",
+    "model__tol": 0.0004340355565759915,
+    "model__vector_size": 1916,
+    "model__window": 10
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.388655294543377,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 48182193
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 2.6702732815073835,
+    "model__criterion": "entropy",
+    "model__max_depth": 10,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 640,
+    "model__min_impurity_decrease": 2.382462430162545,
+    "model__min_samples_leaf": 9,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.41478758347233535,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 574302
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.2548845941009112,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 10850676
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.4610570474282152,
+    "model__epochs": 5,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.28995131689701603,
+    "model__max_iter": 888,
+    "model__min_count": 6,
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tol": 0.0004920077096540069,
+    "model__vector_size": 8289,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.736431718817559,
+    "model__dual": false,
+    "model__epochs": 7,
+    "model__intercept_scaling": 3.6385194749238683,
+    "model__max_iter": 1663,
+    "model__min_count": 3,
+    "model__penalty": "l1",
+    "model__tol": 0.0008041816199458909,
+    "model__vector_size": 3573,
+    "model__window": 6
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.6008567831517505,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.3805321296132046,
+    "model__max_iter": 219,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 6177971,
+    "model__tol": 8.136287793582541e-05
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 22869731
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 8,
+    "model__min_count": 1,
+    "model__vector_size": 4839,
+    "model__window": 1
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 17,
+    "model__min_count": 2,
+    "model__vector_size": 3605,
+    "model__window": 3
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 7.055997882328812,
+    "model__criterion": "entropy",
+    "model__max_depth": 1,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 326,
+    "model__min_impurity_decrease": 9.622884777142069,
+    "model__min_samples_leaf": 15,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.4715801347920819,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 43355226
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 0.3016341863819805,
+    "model__epochs": 15,
+    "model__min_count": 3,
+    "model__vector_size": 7669,
+    "model__window": 1
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.9218134086868707,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 3.080879951762038,
+    "model__max_iter": 845,
+    "model__min_count": 1,
+    "model__penalty": "l2",
+    "model__tol": 0.0009757551292048102,
+    "model__vector_size": 374,
+    "model__window": 10
+}
+{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.590290995152243,
+    "model__epochs": 16,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.08862520480290692,
+    "model__max_iter": 536,
+    "model__min_count": 4,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0008154550415877287,
+    "model__vector_size": 3765,
+    "model__window": 10
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.08759815813145,
+    "model__dual": false,
+    "model__epochs": 9,
+    "model__intercept_scaling": 2.693665984475624,
+    "model__max_iter": 254,
+    "model__min_count": 8,
+    "model__penalty": "l2",
+    "model__tol": 0.0005525492035743556,
+    "model__vector_size": 9625,
+    "model__window": 2
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 8.865463742308574,
+    "model__criterion": "gini",
+    "model__epochs": 12,
+    "model__max_depth": 7,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 779,
+    "model__min_count": 2,
+    "model__min_impurity_decrease": 3.172354663524949,
+    "model__min_samples_leaf": 18,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.4532163378877864,
+    "model__splitter": "best",
+    "model__vector_size": 1586,
+    "model__window": 2
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 5,
+    "model__vector_size": 9630,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.8714105783776714,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 7.632456139600638,
+    "model__max_iter": 364,
+    "model__min_count": 4,
+    "model__penalty": "l1",
+    "model__tol": 0.0004340355565759915,
+    "model__vector_size": 1916,
+    "model__window": 10
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.388655294543377,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 48182193
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 2.6702732815073835,
+    "model__criterion": "entropy",
+    "model__max_depth": 10,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 640,
+    "model__min_impurity_decrease": 2.382462430162545,
+    "model__min_samples_leaf": 9,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.41478758347233535,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 574302
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.2548845941009112,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 10850676
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.4610570474282152,
+    "model__epochs": 5,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.28995131689701603,
+    "model__max_iter": 888,
+    "model__min_count": 6,
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tol": 0.0004920077096540069,
+    "model__vector_size": 8289,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.736431718817559,
+    "model__dual": false,
+    "model__epochs": 7,
+    "model__intercept_scaling": 3.6385194749238683,
+    "model__max_iter": 1663,
+    "model__min_count": 3,
+    "model__penalty": "l1",
+    "model__tol": 0.0008041816199458909,
+    "model__vector_size": 3573,
+    "model__window": 6
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.6008567831517505,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.3805321296132046,
+    "model__max_iter": 219,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 6177971,
+    "model__tol": 8.136287793582541e-05
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 22869731
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 8,
+    "model__min_count": 1,
+    "model__vector_size": 4839,
+    "model__window": 1
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 17,
+    "model__min_count": 2,
+    "model__vector_size": 3605,
+    "model__window": 3
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 7.055997882328812,
+    "model__criterion": "entropy",
+    "model__max_depth": 1,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 326,
+    "model__min_impurity_decrease": 9.622884777142069,
+    "model__min_samples_leaf": 15,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.4715801347920819,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 43355226
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 0.3016341863819805,
+    "model__epochs": 15,
+    "model__min_count": 3,
+    "model__vector_size": 7669,
+    "model__window": 1
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.9218134086868707,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 3.080879951762038,
+    "model__max_iter": 845,
+    "model__min_count": 1,
+    "model__penalty": "l2",
+    "model__tol": 0.0009757551292048102,
+    "model__vector_size": 374,
+    "model__window": 10
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.504536080615745,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.8511058668922438,
+    "model__max_iter": 640,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 37114654,
+    "model__tol": 0.00031253154269391526
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.45961316843046995,
+    "model__dual": false,
+    "model__intercept_scaling": 1.0683750654696567,
+    "model__max_iter": 1784,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 42750868,
+    "model__tol": 0.0002702323517251635
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.584376468204795,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.14127944694191752,
+    "model__max_iter": 196,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 19850789,
+    "model__tol": 0.0006426888457076658
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.233938349713368,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.7097641989886312,
+    "model__max_iter": 619,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 49001448,
+    "model__tol": 0.0005636144666420885
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.5202879272661256,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.05589533986600692,
+    "model__max_iter": 974,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 38434050,
+    "model__tol": 0.00010312390688820893
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.4724169322466535,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.7851919341509251,
+    "model__max_iter": 436,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 46059035,
+    "model__tol": 0.00026092451663267593
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 2.7357543298721176,
+    "model__criterion": "entropy",
+    "model__max_depth": 6,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 525,
+    "model__min_impurity_decrease": 2.045606192423021,
+    "model__min_samples_leaf": 17,
+    "model__min_samples_split": 7,
+    "model__min_weight_fraction_leaf": 0.09973171736875375,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 46565112
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.5502774011265644,
+    "model__dual": false,
+    "model__intercept_scaling": 3.3359327006390047,
+    "model__max_iter": 288,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 35014184,
+    "model__tol": 0.0007174903717029151
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.2077550682233933,
+    "model__dual": false,
+    "model__intercept_scaling": 9.182035821327815,
+    "model__max_iter": 694,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 20589180,
+    "model__tol": 0.0009859428987452718
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.467288809178193,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 16785400
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.8200093683854998,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 40434126
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 9.228936348006217,
+    "model__criterion": "entropy",
+    "model__max_depth": 2,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 123,
+    "model__min_impurity_decrease": 5.314903780236798,
+    "model__min_samples_leaf": 8,
+    "model__min_samples_split": 2,
+    "model__min_weight_fraction_leaf": 0.20378120888855283,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 12811503
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.7758283430228086,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 30656359
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.1425569566923989,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.8903642937910158,
+    "model__max_iter": 896,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 45593193,
+    "model__tol": 0.0004043644943460373
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.4467032829400356,
+    "model__dual": false,
+    "model__intercept_scaling": 5.839073237597041,
+    "model__max_iter": 761,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 8704937,
+    "model__tol": 0.00063119740841744
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.867196407120998,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 14484962
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 1.8074363970876668,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 24533883
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.4580639067861617,
+    "model__epochs": 17,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.5958372669359091,
+    "model__max_iter": 265,
+    "model__min_count": 5,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0006943143693061356,
+    "model__vector_size": 22,
+    "model__window": 9
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.32153554994654276,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 40655791
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 1.280328730858165,
+    "model__epochs": 7,
+    "model__min_count": 1,
+    "model__vector_size": 2187,
+    "model__window": 1
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.057732428235557,
+    "model__epochs": 24,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.9484062136841442,
+    "model__max_iter": 577,
+    "model__min_count": 5,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.0005141700245158886,
+    "model__vector_size": 72,
+    "model__window": 5
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.6388794836455746,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.1899211644998391,
+    "model__max_iter": 629,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 9612302,
+    "model__tol": 0.0006862521444432751
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 3.7607831724991003,
+    "model__criterion": "gini",
+    "model__epochs": 7,
+    "model__max_depth": 9,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 426,
+    "model__min_count": 9,
+    "model__min_impurity_decrease": 2.880339761250308,
+    "model__min_samples_leaf": 7,
+    "model__min_samples_split": 2,
+    "model__min_weight_fraction_leaf": 0.27141659354960035,
+    "model__splitter": "random",
+    "model__vector_size": 2199,
+    "model__window": 4
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.8583808704598342,
+    "model__dual": false,
+    "model__epochs": 5,
+    "model__intercept_scaling": 1.7575552665424066,
+    "model__max_iter": 1097,
+    "model__min_count": 3,
+    "model__penalty": "l2",
+    "model__tol": 0.0006019752083178385,
+    "model__vector_size": 160,
+    "model__window": 10
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 5,
+    "model__vector_size": 1291,
+    "model__window": 2
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.173162258066895,
+    "model__dual": false,
+    "model__intercept_scaling": 1.811715948360827,
+    "model__max_iter": 1794,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 23195031,
+    "model__tol": 0.00019762738591841677
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 5.6178914536353055,
+    "model__criterion": "gini",
+    "model__epochs": 23,
+    "model__max_depth": 8,
+    "model__max_features": "auto",
+    "model__max_leaf_nodes": 579,
+    "model__min_count": 6,
+    "model__min_impurity_decrease": 8.645445527250956,
+    "model__min_samples_leaf": 9,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.18119948235166633,
+    "model__splitter": "best",
+    "model__vector_size": 9109,
+    "model__window": 6
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 48842854
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.4760362580972397,
+    "model__dual": false,
+    "model__intercept_scaling": 9.464139233656663,
+    "model__max_iter": 1429,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 16110505,
+    "model__tol": 0.0004448397317581318
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.0608923663889431,
+    "model__dual": false,
+    "model__epochs": 22,
+    "model__intercept_scaling": 9.133969113594326,
+    "model__max_iter": 107,
+    "model__min_count": 5,
+    "model__penalty": "l2",
+    "model__tol": 0.0001031660572876346,
+    "model__vector_size": 4965,
+    "model__window": 5
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 25,
+    "model__min_count": 3,
+    "model__vector_size": 9371,
+    "model__window": 3
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.9349094506886462,
+    "model__dual": false,
+    "model__epochs": 8,
+    "model__intercept_scaling": 7.339955508987669,
+    "model__max_iter": 890,
+    "model__min_count": 9,
+    "model__penalty": "l1",
+    "model__tol": 0.0006179417670981756,
+    "model__vector_size": 9340,
+    "model__window": 2
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 4.115597288184484,
+    "model__epochs": 8,
+    "model__min_count": 4,
+    "model__vector_size": 9502,
+    "model__window": 8
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.940121225311339,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 37148385
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.44373178116593615,
+    "model__epochs": 6,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.9197857343380432,
+    "model__max_iter": 108,
+    "model__min_count": 9,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 8.150213617328094e-05,
+    "model__vector_size": 3178,
+    "model__window": 5
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.7650474508821465,
+    "model__epochs": 14,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.39049423281551354,
+    "model__max_iter": 974,
+    "model__min_count": 5,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.00043900440903198515,
+    "model__vector_size": 8765,
+    "model__window": 5
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.05528192048882,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.5823226774311205,
+    "model__max_iter": 995,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 15300570,
+    "model__tol": 0.00013702948842861783
+}
+{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.590290995152243,
+    "model__epochs": 16,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.08862520480290692,
+    "model__max_iter": 536,
+    "model__min_count": 4,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0008154550415877287,
+    "model__vector_size": 3765,
+    "model__window": 10
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.08759815813145,
+    "model__dual": false,
+    "model__epochs": 9,
+    "model__intercept_scaling": 2.693665984475624,
+    "model__max_iter": 254,
+    "model__min_count": 8,
+    "model__penalty": "l2",
+    "model__tol": 0.0005525492035743556,
+    "model__vector_size": 9625,
+    "model__window": 2
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 8.865463742308574,
+    "model__criterion": "gini",
+    "model__epochs": 12,
+    "model__max_depth": 7,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 779,
+    "model__min_count": 2,
+    "model__min_impurity_decrease": 3.172354663524949,
+    "model__min_samples_leaf": 18,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.4532163378877864,
+    "model__splitter": "best",
+    "model__vector_size": 1586,
+    "model__window": 2
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 5,
+    "model__vector_size": 9630,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.8714105783776714,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 7.632456139600638,
+    "model__max_iter": 364,
+    "model__min_count": 4,
+    "model__penalty": "l1",
+    "model__tol": 0.0004340355565759915,
+    "model__vector_size": 1916,
+    "model__window": 10
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.388655294543377,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 48182193
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 2.6702732815073835,
+    "model__criterion": "entropy",
+    "model__max_depth": 10,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 640,
+    "model__min_impurity_decrease": 2.382462430162545,
+    "model__min_samples_leaf": 9,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.41478758347233535,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 574302
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.2548845941009112,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 10850676
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.4610570474282152,
+    "model__epochs": 5,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.28995131689701603,
+    "model__max_iter": 888,
+    "model__min_count": 6,
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tol": 0.0004920077096540069,
+    "model__vector_size": 8289,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.736431718817559,
+    "model__dual": false,
+    "model__epochs": 7,
+    "model__intercept_scaling": 3.6385194749238683,
+    "model__max_iter": 1663,
+    "model__min_count": 3,
+    "model__penalty": "l1",
+    "model__tol": 0.0008041816199458909,
+    "model__vector_size": 3573,
+    "model__window": 6
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.6008567831517505,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.3805321296132046,
+    "model__max_iter": 219,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 6177971,
+    "model__tol": 8.136287793582541e-05
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 22869731
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 8,
+    "model__min_count": 1,
+    "model__vector_size": 4839,
+    "model__window": 1
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 17,
+    "model__min_count": 2,
+    "model__vector_size": 3605,
+    "model__window": 3
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 7.055997882328812,
+    "model__criterion": "entropy",
+    "model__max_depth": 1,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 326,
+    "model__min_impurity_decrease": 9.622884777142069,
+    "model__min_samples_leaf": 15,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.4715801347920819,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 43355226
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 0.3016341863819805,
+    "model__epochs": 15,
+    "model__min_count": 3,
+    "model__vector_size": 7669,
+    "model__window": 1
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.9218134086868707,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 3.080879951762038,
+    "model__max_iter": 845,
+    "model__min_count": 1,
+    "model__penalty": "l2",
+    "model__tol": 0.0009757551292048102,
+    "model__vector_size": 374,
+    "model__window": 10
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.504536080615745,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.8511058668922438,
+    "model__max_iter": 640,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 37114654,
+    "model__tol": 0.00031253154269391526
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.45961316843046995,
+    "model__dual": false,
+    "model__intercept_scaling": 1.0683750654696567,
+    "model__max_iter": 1784,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 42750868,
+    "model__tol": 0.0002702323517251635
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.584376468204795,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.14127944694191752,
+    "model__max_iter": 196,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 19850789,
+    "model__tol": 0.0006426888457076658
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.233938349713368,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.7097641989886312,
+    "model__max_iter": 619,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 49001448,
+    "model__tol": 0.0005636144666420885
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.5202879272661256,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.05589533986600692,
+    "model__max_iter": 974,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 38434050,
+    "model__tol": 0.00010312390688820893
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.4724169322466535,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.7851919341509251,
+    "model__max_iter": 436,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 46059035,
+    "model__tol": 0.00026092451663267593
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 2.7357543298721176,
+    "model__criterion": "entropy",
+    "model__max_depth": 6,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 525,
+    "model__min_impurity_decrease": 2.045606192423021,
+    "model__min_samples_leaf": 17,
+    "model__min_samples_split": 7,
+    "model__min_weight_fraction_leaf": 0.09973171736875375,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 46565112
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.5502774011265644,
+    "model__dual": false,
+    "model__intercept_scaling": 3.3359327006390047,
+    "model__max_iter": 288,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 35014184,
+    "model__tol": 0.0007174903717029151
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.2077550682233933,
+    "model__dual": false,
+    "model__intercept_scaling": 9.182035821327815,
+    "model__max_iter": 694,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 20589180,
+    "model__tol": 0.0009859428987452718
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.467288809178193,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 16785400
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.8200093683854998,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 40434126
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 9.228936348006217,
+    "model__criterion": "entropy",
+    "model__max_depth": 2,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 123,
+    "model__min_impurity_decrease": 5.314903780236798,
+    "model__min_samples_leaf": 8,
+    "model__min_samples_split": 2,
+    "model__min_weight_fraction_leaf": 0.20378120888855283,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 12811503
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.7758283430228086,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 30656359
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.1425569566923989,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.8903642937910158,
+    "model__max_iter": 896,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 45593193,
+    "model__tol": 0.0004043644943460373
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.4467032829400356,
+    "model__dual": false,
+    "model__intercept_scaling": 5.839073237597041,
+    "model__max_iter": 761,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 8704937,
+    "model__tol": 0.00063119740841744
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.867196407120998,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 14484962
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 1.8074363970876668,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 24533883
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.4580639067861617,
+    "model__epochs": 17,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.5958372669359091,
+    "model__max_iter": 265,
+    "model__min_count": 5,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0006943143693061356,
+    "model__vector_size": 22,
+    "model__window": 9
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.32153554994654276,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 40655791
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 1.280328730858165,
+    "model__epochs": 7,
+    "model__min_count": 1,
+    "model__vector_size": 2187,
+    "model__window": 1
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.057732428235557,
+    "model__epochs": 24,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.9484062136841442,
+    "model__max_iter": 577,
+    "model__min_count": 5,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.0005141700245158886,
+    "model__vector_size": 72,
+    "model__window": 5
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.6388794836455746,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.1899211644998391,
+    "model__max_iter": 629,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 9612302,
+    "model__tol": 0.0006862521444432751
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 3.7607831724991003,
+    "model__criterion": "gini",
+    "model__epochs": 7,
+    "model__max_depth": 9,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 426,
+    "model__min_count": 9,
+    "model__min_impurity_decrease": 2.880339761250308,
+    "model__min_samples_leaf": 7,
+    "model__min_samples_split": 2,
+    "model__min_weight_fraction_leaf": 0.27141659354960035,
+    "model__splitter": "random",
+    "model__vector_size": 2199,
+    "model__window": 4
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.8583808704598342,
+    "model__dual": false,
+    "model__epochs": 5,
+    "model__intercept_scaling": 1.7575552665424066,
+    "model__max_iter": 1097,
+    "model__min_count": 3,
+    "model__penalty": "l2",
+    "model__tol": 0.0006019752083178385,
+    "model__vector_size": 160,
+    "model__window": 10
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 5,
+    "model__vector_size": 1291,
+    "model__window": 2
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.173162258066895,
+    "model__dual": false,
+    "model__intercept_scaling": 1.811715948360827,
+    "model__max_iter": 1794,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 23195031,
+    "model__tol": 0.00019762738591841677
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 5.6178914536353055,
+    "model__criterion": "gini",
+    "model__epochs": 23,
+    "model__max_depth": 8,
+    "model__max_features": "auto",
+    "model__max_leaf_nodes": 579,
+    "model__min_count": 6,
+    "model__min_impurity_decrease": 8.645445527250956,
+    "model__min_samples_leaf": 9,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.18119948235166633,
+    "model__splitter": "best",
+    "model__vector_size": 9109,
+    "model__window": 6
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 48842854
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.4760362580972397,
+    "model__dual": false,
+    "model__intercept_scaling": 9.464139233656663,
+    "model__max_iter": 1429,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 16110505,
+    "model__tol": 0.0004448397317581318
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.0608923663889431,
+    "model__dual": false,
+    "model__epochs": 22,
+    "model__intercept_scaling": 9.133969113594326,
+    "model__max_iter": 107,
+    "model__min_count": 5,
+    "model__penalty": "l2",
+    "model__tol": 0.0001031660572876346,
+    "model__vector_size": 4965,
+    "model__window": 5
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 25,
+    "model__min_count": 3,
+    "model__vector_size": 9371,
+    "model__window": 3
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.9349094506886462,
+    "model__dual": false,
+    "model__epochs": 8,
+    "model__intercept_scaling": 7.339955508987669,
+    "model__max_iter": 890,
+    "model__min_count": 9,
+    "model__penalty": "l1",
+    "model__tol": 0.0006179417670981756,
+    "model__vector_size": 9340,
+    "model__window": 2
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 4.115597288184484,
+    "model__epochs": 8,
+    "model__min_count": 4,
+    "model__vector_size": 9502,
+    "model__window": 8
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.940121225311339,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 37148385
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.44373178116593615,
+    "model__epochs": 6,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.9197857343380432,
+    "model__max_iter": 108,
+    "model__min_count": 9,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 8.150213617328094e-05,
+    "model__vector_size": 3178,
+    "model__window": 5
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.7650474508821465,
+    "model__epochs": 14,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.39049423281551354,
+    "model__max_iter": 974,
+    "model__min_count": 5,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.00043900440903198515,
+    "model__vector_size": 8765,
+    "model__window": 5
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.05528192048882,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.5823226774311205,
+    "model__max_iter": 995,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 15300570,
+    "model__tol": 0.00013702948842861783
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 11,
+    "model__min_count": 4,
+    "model__vector_size": 673,
+    "model__window": 5
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.2356596413298955,
+    "model__dual": false,
+    "model__epochs": 16,
+    "model__intercept_scaling": 8.140806384660698,
+    "model__max_iter": 1539,
+    "model__min_count": 6,
+    "model__penalty": "l2",
+    "model__tol": 0.00011648688987731093,
+    "model__vector_size": 550,
+    "model__window": 4
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 11,
+    "model__min_count": 7,
+    "model__vector_size": 3584,
+    "model__window": 6
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 2.0642942322783613,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 8.253081764199006,
+    "model__max_iter": 1926,
+    "model__min_count": 3,
+    "model__penalty": "l1",
+    "model__tol": 0.0004538475200713612,
+    "model__vector_size": 7403,
+    "model__window": 5
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 1186051
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.23358617169471155,
+    "model__dual": false,
+    "model__intercept_scaling": 1.4084556002125115,
+    "model__max_iter": 267,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 37983134,
+    "model__tol": 6.26263071969394e-05
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 5041806
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 7,
+    "model__min_count": 7,
+    "model__vector_size": 391,
+    "model__window": 6
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 0.13310842109126142,
+    "model__criterion": "gini",
+    "model__epochs": 19,
+    "model__max_depth": 2,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 876,
+    "model__min_count": 6,
+    "model__min_impurity_decrease": 0.07605401378201648,
+    "model__min_samples_leaf": 6,
+    "model__min_samples_split": 18,
+    "model__min_weight_fraction_leaf": 0.10258709425896473,
+    "model__splitter": "best",
+    "model__vector_size": 8348,
+    "model__window": 10
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 4.18666406633267,
+    "model__criterion": "entropy",
+    "model__epochs": 16,
+    "model__max_depth": 10,
+    "model__max_features": "sqrt",
+    "model__max_leaf_nodes": 370,
+    "model__min_count": 8,
+    "model__min_impurity_decrease": 3.01484248969365,
+    "model__min_samples_leaf": 4,
+    "model__min_samples_split": 6,
+    "model__min_weight_fraction_leaf": 0.07386662829545693,
+    "model__splitter": "random",
+    "model__vector_size": 3079,
+    "model__window": 10
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.10665591060550597,
+    "model__dual": false,
+    "model__intercept_scaling": 10.06488496157841,
+    "model__max_iter": 1743,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 41290566,
+    "model__tol": 0.0007188060275916422
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 4.5804408686291085,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 49676260
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 5,
+    "model__min_count": 6,
+    "model__vector_size": 6595,
+    "model__window": 3
+}
+{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.590290995152243,
+    "model__epochs": 16,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.08862520480290692,
+    "model__max_iter": 536,
+    "model__min_count": 4,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0008154550415877287,
+    "model__vector_size": 3765,
+    "model__window": 10
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.08759815813145,
+    "model__dual": false,
+    "model__epochs": 9,
+    "model__intercept_scaling": 2.693665984475624,
+    "model__max_iter": 254,
+    "model__min_count": 8,
+    "model__penalty": "l2",
+    "model__tol": 0.0005525492035743556,
+    "model__vector_size": 9625,
+    "model__window": 2
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 8.865463742308574,
+    "model__criterion": "gini",
+    "model__epochs": 12,
+    "model__max_depth": 7,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 779,
+    "model__min_count": 2,
+    "model__min_impurity_decrease": 3.172354663524949,
+    "model__min_samples_leaf": 18,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.4532163378877864,
+    "model__splitter": "best",
+    "model__vector_size": 1586,
+    "model__window": 2
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 5,
+    "model__vector_size": 9630,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.8714105783776714,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 7.632456139600638,
+    "model__max_iter": 364,
+    "model__min_count": 4,
+    "model__penalty": "l1",
+    "model__tol": 0.0004340355565759915,
+    "model__vector_size": 1916,
+    "model__window": 10
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.388655294543377,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 48182193
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 2.6702732815073835,
+    "model__criterion": "entropy",
+    "model__max_depth": 10,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 640,
+    "model__min_impurity_decrease": 2.382462430162545,
+    "model__min_samples_leaf": 9,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.41478758347233535,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 574302
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.2548845941009112,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 10850676
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.4610570474282152,
+    "model__epochs": 5,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.28995131689701603,
+    "model__max_iter": 888,
+    "model__min_count": 6,
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tol": 0.0004920077096540069,
+    "model__vector_size": 8289,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.736431718817559,
+    "model__dual": false,
+    "model__epochs": 7,
+    "model__intercept_scaling": 3.6385194749238683,
+    "model__max_iter": 1663,
+    "model__min_count": 3,
+    "model__penalty": "l1",
+    "model__tol": 0.0008041816199458909,
+    "model__vector_size": 3573,
+    "model__window": 6
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.6008567831517505,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.3805321296132046,
+    "model__max_iter": 219,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 6177971,
+    "model__tol": 8.136287793582541e-05
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 22869731
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 8,
+    "model__min_count": 1,
+    "model__vector_size": 4839,
+    "model__window": 1
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 17,
+    "model__min_count": 2,
+    "model__vector_size": 3605,
+    "model__window": 3
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 7.055997882328812,
+    "model__criterion": "entropy",
+    "model__max_depth": 1,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 326,
+    "model__min_impurity_decrease": 9.622884777142069,
+    "model__min_samples_leaf": 15,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.4715801347920819,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 43355226
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 0.3016341863819805,
+    "model__epochs": 15,
+    "model__min_count": 3,
+    "model__vector_size": 7669,
+    "model__window": 1
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.9218134086868707,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 3.080879951762038,
+    "model__max_iter": 845,
+    "model__min_count": 1,
+    "model__penalty": "l2",
+    "model__tol": 0.0009757551292048102,
+    "model__vector_size": 374,
+    "model__window": 10
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.504536080615745,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.8511058668922438,
+    "model__max_iter": 640,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 37114654,
+    "model__tol": 0.00031253154269391526
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.45961316843046995,
+    "model__dual": false,
+    "model__intercept_scaling": 1.0683750654696567,
+    "model__max_iter": 1784,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 42750868,
+    "model__tol": 0.0002702323517251635
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.584376468204795,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.14127944694191752,
+    "model__max_iter": 196,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 19850789,
+    "model__tol": 0.0006426888457076658
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.233938349713368,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.7097641989886312,
+    "model__max_iter": 619,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 49001448,
+    "model__tol": 0.0005636144666420885
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.5202879272661256,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.05589533986600692,
+    "model__max_iter": 974,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 38434050,
+    "model__tol": 0.00010312390688820893
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.4724169322466535,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.7851919341509251,
+    "model__max_iter": 436,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 46059035,
+    "model__tol": 0.00026092451663267593
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 2.7357543298721176,
+    "model__criterion": "entropy",
+    "model__max_depth": 6,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 525,
+    "model__min_impurity_decrease": 2.045606192423021,
+    "model__min_samples_leaf": 17,
+    "model__min_samples_split": 7,
+    "model__min_weight_fraction_leaf": 0.09973171736875375,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 46565112
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.5502774011265644,
+    "model__dual": false,
+    "model__intercept_scaling": 3.3359327006390047,
+    "model__max_iter": 288,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 35014184,
+    "model__tol": 0.0007174903717029151
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.2077550682233933,
+    "model__dual": false,
+    "model__intercept_scaling": 9.182035821327815,
+    "model__max_iter": 694,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 20589180,
+    "model__tol": 0.0009859428987452718
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.467288809178193,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 16785400
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.8200093683854998,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 40434126
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 9.228936348006217,
+    "model__criterion": "entropy",
+    "model__max_depth": 2,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 123,
+    "model__min_impurity_decrease": 5.314903780236798,
+    "model__min_samples_leaf": 8,
+    "model__min_samples_split": 2,
+    "model__min_weight_fraction_leaf": 0.20378120888855283,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 12811503
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.7758283430228086,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 30656359
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.1425569566923989,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.8903642937910158,
+    "model__max_iter": 896,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 45593193,
+    "model__tol": 0.0004043644943460373
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.4467032829400356,
+    "model__dual": false,
+    "model__intercept_scaling": 5.839073237597041,
+    "model__max_iter": 761,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 8704937,
+    "model__tol": 0.00063119740841744
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.867196407120998,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 14484962
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 1.8074363970876668,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 24533883
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.4580639067861617,
+    "model__epochs": 17,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.5958372669359091,
+    "model__max_iter": 265,
+    "model__min_count": 5,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0006943143693061356,
+    "model__vector_size": 22,
+    "model__window": 9
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.32153554994654276,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 40655791
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 1.280328730858165,
+    "model__epochs": 7,
+    "model__min_count": 1,
+    "model__vector_size": 2187,
+    "model__window": 1
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.057732428235557,
+    "model__epochs": 24,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.9484062136841442,
+    "model__max_iter": 577,
+    "model__min_count": 5,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.0005141700245158886,
+    "model__vector_size": 72,
+    "model__window": 5
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.6388794836455746,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.1899211644998391,
+    "model__max_iter": 629,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 9612302,
+    "model__tol": 0.0006862521444432751
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 3.7607831724991003,
+    "model__criterion": "gini",
+    "model__epochs": 7,
+    "model__max_depth": 9,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 426,
+    "model__min_count": 9,
+    "model__min_impurity_decrease": 2.880339761250308,
+    "model__min_samples_leaf": 7,
+    "model__min_samples_split": 2,
+    "model__min_weight_fraction_leaf": 0.27141659354960035,
+    "model__splitter": "random",
+    "model__vector_size": 2199,
+    "model__window": 4
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.8583808704598342,
+    "model__dual": false,
+    "model__epochs": 5,
+    "model__intercept_scaling": 1.7575552665424066,
+    "model__max_iter": 1097,
+    "model__min_count": 3,
+    "model__penalty": "l2",
+    "model__tol": 0.0006019752083178385,
+    "model__vector_size": 160,
+    "model__window": 10
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 5,
+    "model__vector_size": 1291,
+    "model__window": 2
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.173162258066895,
+    "model__dual": false,
+    "model__intercept_scaling": 1.811715948360827,
+    "model__max_iter": 1794,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 23195031,
+    "model__tol": 0.00019762738591841677
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 5.6178914536353055,
+    "model__criterion": "gini",
+    "model__epochs": 23,
+    "model__max_depth": 8,
+    "model__max_features": "auto",
+    "model__max_leaf_nodes": 579,
+    "model__min_count": 6,
+    "model__min_impurity_decrease": 8.645445527250956,
+    "model__min_samples_leaf": 9,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.18119948235166633,
+    "model__splitter": "best",
+    "model__vector_size": 9109,
+    "model__window": 6
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 48842854
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.4760362580972397,
+    "model__dual": false,
+    "model__intercept_scaling": 9.464139233656663,
+    "model__max_iter": 1429,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 16110505,
+    "model__tol": 0.0004448397317581318
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.0608923663889431,
+    "model__dual": false,
+    "model__epochs": 22,
+    "model__intercept_scaling": 9.133969113594326,
+    "model__max_iter": 107,
+    "model__min_count": 5,
+    "model__penalty": "l2",
+    "model__tol": 0.0001031660572876346,
+    "model__vector_size": 4965,
+    "model__window": 5
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 25,
+    "model__min_count": 3,
+    "model__vector_size": 9371,
+    "model__window": 3
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.9349094506886462,
+    "model__dual": false,
+    "model__epochs": 8,
+    "model__intercept_scaling": 7.339955508987669,
+    "model__max_iter": 890,
+    "model__min_count": 9,
+    "model__penalty": "l1",
+    "model__tol": 0.0006179417670981756,
+    "model__vector_size": 9340,
+    "model__window": 2
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 4.115597288184484,
+    "model__epochs": 8,
+    "model__min_count": 4,
+    "model__vector_size": 9502,
+    "model__window": 8
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.940121225311339,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 37148385
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.44373178116593615,
+    "model__epochs": 6,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.9197857343380432,
+    "model__max_iter": 108,
+    "model__min_count": 9,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 8.150213617328094e-05,
+    "model__vector_size": 3178,
+    "model__window": 5
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.7650474508821465,
+    "model__epochs": 14,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.39049423281551354,
+    "model__max_iter": 974,
+    "model__min_count": 5,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.00043900440903198515,
+    "model__vector_size": 8765,
+    "model__window": 5
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.05528192048882,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.5823226774311205,
+    "model__max_iter": 995,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 15300570,
+    "model__tol": 0.00013702948842861783
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 11,
+    "model__min_count": 4,
+    "model__vector_size": 673,
+    "model__window": 5
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.2356596413298955,
+    "model__dual": false,
+    "model__epochs": 16,
+    "model__intercept_scaling": 8.140806384660698,
+    "model__max_iter": 1539,
+    "model__min_count": 6,
+    "model__penalty": "l2",
+    "model__tol": 0.00011648688987731093,
+    "model__vector_size": 550,
+    "model__window": 4
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 11,
+    "model__min_count": 7,
+    "model__vector_size": 3584,
+    "model__window": 6
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 2.0642942322783613,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 8.253081764199006,
+    "model__max_iter": 1926,
+    "model__min_count": 3,
+    "model__penalty": "l1",
+    "model__tol": 0.0004538475200713612,
+    "model__vector_size": 7403,
+    "model__window": 5
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 1186051
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.23358617169471155,
+    "model__dual": false,
+    "model__intercept_scaling": 1.4084556002125115,
+    "model__max_iter": 267,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 37983134,
+    "model__tol": 6.26263071969394e-05
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 5041806
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 7,
+    "model__min_count": 7,
+    "model__vector_size": 391,
+    "model__window": 6
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 0.13310842109126142,
+    "model__criterion": "gini",
+    "model__epochs": 19,
+    "model__max_depth": 2,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 876,
+    "model__min_count": 6,
+    "model__min_impurity_decrease": 0.07605401378201648,
+    "model__min_samples_leaf": 6,
+    "model__min_samples_split": 18,
+    "model__min_weight_fraction_leaf": 0.10258709425896473,
+    "model__splitter": "best",
+    "model__vector_size": 8348,
+    "model__window": 10
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 4.18666406633267,
+    "model__criterion": "entropy",
+    "model__epochs": 16,
+    "model__max_depth": 10,
+    "model__max_features": "sqrt",
+    "model__max_leaf_nodes": 370,
+    "model__min_count": 8,
+    "model__min_impurity_decrease": 3.01484248969365,
+    "model__min_samples_leaf": 4,
+    "model__min_samples_split": 6,
+    "model__min_weight_fraction_leaf": 0.07386662829545693,
+    "model__splitter": "random",
+    "model__vector_size": 3079,
+    "model__window": 10
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.10665591060550597,
+    "model__dual": false,
+    "model__intercept_scaling": 10.06488496157841,
+    "model__max_iter": 1743,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 41290566,
+    "model__tol": 0.0007188060275916422
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 4.5804408686291085,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 49676260
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 5,
+    "model__min_count": 6,
+    "model__vector_size": 6595,
+    "model__window": 3
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.4895997847748499,
+    "model__dual": false,
+    "model__intercept_scaling": 8.164094214641283,
+    "model__max_iter": 1014,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 362406,
+    "model__tol": 0.0005026359587271752
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 9.975843403572313,
+    "model__criterion": "gini",
+    "model__epochs": 17,
+    "model__max_depth": 3,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 269,
+    "model__min_count": 6,
+    "model__min_impurity_decrease": 3.7995683067320742,
+    "model__min_samples_leaf": 14,
+    "model__min_samples_split": 16,
+    "model__min_weight_fraction_leaf": 0.24539580699256813,
+    "model__splitter": "random",
+    "model__vector_size": 1236,
+    "model__window": 1
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.6581286998602232,
+    "model__dual": false,
+    "model__intercept_scaling": 4.8989339276719805,
+    "model__max_iter": 827,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 49983746,
+    "model__tol": 0.0005084274878910291
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.9527677027626241,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 11841566
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.5201412024592263,
+    "model__dual": false,
+    "model__intercept_scaling": 0.8880879987263567,
+    "model__max_iter": 1649,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 6455929,
+    "model__tol": 0.0009754112452043682
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.5482483094006901,
+    "model__epochs": 11,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.23692442862356755,
+    "model__max_iter": 175,
+    "model__min_count": 1,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0006673091484178706,
+    "model__vector_size": 1432,
+    "model__window": 7
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.3466388803982898,
+    "model__dual": false,
+    "model__epochs": 18,
+    "model__intercept_scaling": 8.597002501123532,
+    "model__max_iter": 416,
+    "model__min_count": 10,
+    "model__penalty": "l2",
+    "model__tol": 0.0008954165672384203,
+    "model__vector_size": 6266,
+    "model__window": 9
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 1.9031544000749223,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 41161040
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.2303531337434293,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.3525139671601829,
+    "model__max_iter": 223,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 10576260,
+    "model__tol": 0.00010626319961533103
+}
+{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.590290995152243,
+    "model__epochs": 16,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.08862520480290692,
+    "model__max_iter": 536,
+    "model__min_count": 4,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0008154550415877287,
+    "model__vector_size": 3765,
+    "model__window": 10
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.08759815813145,
+    "model__dual": false,
+    "model__epochs": 9,
+    "model__intercept_scaling": 2.693665984475624,
+    "model__max_iter": 254,
+    "model__min_count": 8,
+    "model__penalty": "l2",
+    "model__tol": 0.0005525492035743556,
+    "model__vector_size": 9625,
+    "model__window": 2
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 8.865463742308574,
+    "model__criterion": "gini",
+    "model__epochs": 12,
+    "model__max_depth": 7,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 779,
+    "model__min_count": 2,
+    "model__min_impurity_decrease": 3.172354663524949,
+    "model__min_samples_leaf": 18,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.4532163378877864,
+    "model__splitter": "best",
+    "model__vector_size": 1586,
+    "model__window": 2
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 5,
+    "model__vector_size": 9630,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.8714105783776714,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 7.632456139600638,
+    "model__max_iter": 364,
+    "model__min_count": 4,
+    "model__penalty": "l1",
+    "model__tol": 0.0004340355565759915,
+    "model__vector_size": 1916,
+    "model__window": 10
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.388655294543377,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 48182193
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 2.6702732815073835,
+    "model__criterion": "entropy",
+    "model__max_depth": 10,
+    "model__max_features": null,
+    "model__max_leaf_nodes": 640,
+    "model__min_impurity_decrease": 2.382462430162545,
+    "model__min_samples_leaf": 9,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.41478758347233535,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 574302
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.2548845941009112,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 10850676
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.4610570474282152,
+    "model__epochs": 5,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.28995131689701603,
+    "model__max_iter": 888,
+    "model__min_count": 6,
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tol": 0.0004920077096540069,
+    "model__vector_size": 8289,
+    "model__window": 2
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.736431718817559,
+    "model__dual": false,
+    "model__epochs": 7,
+    "model__intercept_scaling": 3.6385194749238683,
+    "model__max_iter": 1663,
+    "model__min_count": 3,
+    "model__penalty": "l1",
+    "model__tol": 0.0008041816199458909,
+    "model__vector_size": 3573,
+    "model__window": 6
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.6008567831517505,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.3805321296132046,
+    "model__max_iter": 219,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 6177971,
+    "model__tol": 8.136287793582541e-05
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 22869731
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 8,
+    "model__min_count": 1,
+    "model__vector_size": 4839,
+    "model__window": 1
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 17,
+    "model__min_count": 2,
+    "model__vector_size": 3605,
+    "model__window": 3
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 7.055997882328812,
+    "model__criterion": "entropy",
+    "model__max_depth": 1,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 326,
+    "model__min_impurity_decrease": 9.622884777142069,
+    "model__min_samples_leaf": 15,
+    "model__min_samples_split": 15,
+    "model__min_weight_fraction_leaf": 0.4715801347920819,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 43355226
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 0.3016341863819805,
+    "model__epochs": 15,
+    "model__min_count": 3,
+    "model__vector_size": 7669,
+    "model__window": 1
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.9218134086868707,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 3.080879951762038,
+    "model__max_iter": 845,
+    "model__min_count": 1,
+    "model__penalty": "l2",
+    "model__tol": 0.0009757551292048102,
+    "model__vector_size": 374,
+    "model__window": 10
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.504536080615745,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.8511058668922438,
+    "model__max_iter": 640,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 37114654,
+    "model__tol": 0.00031253154269391526
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.45961316843046995,
+    "model__dual": false,
+    "model__intercept_scaling": 1.0683750654696567,
+    "model__max_iter": 1784,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 42750868,
+    "model__tol": 0.0002702323517251635
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.584376468204795,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.14127944694191752,
+    "model__max_iter": 196,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 19850789,
+    "model__tol": 0.0006426888457076658
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.233938349713368,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.7097641989886312,
+    "model__max_iter": 619,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 49001448,
+    "model__tol": 0.0005636144666420885
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.5202879272661256,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.05589533986600692,
+    "model__max_iter": 974,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 38434050,
+    "model__tol": 0.00010312390688820893
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.4724169322466535,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.7851919341509251,
+    "model__max_iter": 436,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 46059035,
+    "model__tol": 0.00026092451663267593
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 2.7357543298721176,
+    "model__criterion": "entropy",
+    "model__max_depth": 6,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 525,
+    "model__min_impurity_decrease": 2.045606192423021,
+    "model__min_samples_leaf": 17,
+    "model__min_samples_split": 7,
+    "model__min_weight_fraction_leaf": 0.09973171736875375,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 46565112
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.5502774011265644,
+    "model__dual": false,
+    "model__intercept_scaling": 3.3359327006390047,
+    "model__max_iter": 288,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 35014184,
+    "model__tol": 0.0007174903717029151
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.2077550682233933,
+    "model__dual": false,
+    "model__intercept_scaling": 9.182035821327815,
+    "model__max_iter": 694,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 20589180,
+    "model__tol": 0.0009859428987452718
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.467288809178193,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 16785400
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.8200093683854998,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 40434126
+}{
+    "model": "TFIDFDecisionTreeClassifier",
+    "model__ccp_alpha": 9.228936348006217,
+    "model__criterion": "entropy",
+    "model__max_depth": 2,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 123,
+    "model__min_impurity_decrease": 5.314903780236798,
+    "model__min_samples_leaf": 8,
+    "model__min_samples_split": 2,
+    "model__min_weight_fraction_leaf": 0.20378120888855283,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__splitter": "random",
+    "model__tfidf_max_features": 12811503
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.7758283430228086,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 30656359
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.1425569566923989,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.8903642937910158,
+    "model__max_iter": 896,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 45593193,
+    "model__tol": 0.0004043644943460373
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.4467032829400356,
+    "model__dual": false,
+    "model__intercept_scaling": 5.839073237597041,
+    "model__max_iter": 761,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 8704937,
+    "model__tol": 0.00063119740841744
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.867196407120998,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 14484962
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 1.8074363970876668,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 24533883
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.4580639067861617,
+    "model__epochs": 17,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.5958372669359091,
+    "model__max_iter": 265,
+    "model__min_count": 5,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0006943143693061356,
+    "model__vector_size": 22,
+    "model__window": 9
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.32153554994654276,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 40655791
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 1.280328730858165,
+    "model__epochs": 7,
+    "model__min_count": 1,
+    "model__vector_size": 2187,
+    "model__window": 1
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.057732428235557,
+    "model__epochs": 24,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.9484062136841442,
+    "model__max_iter": 577,
+    "model__min_count": 5,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.0005141700245158886,
+    "model__vector_size": 72,
+    "model__window": 5
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.6388794836455746,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.1899211644998391,
+    "model__max_iter": 629,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 9612302,
+    "model__tol": 0.0006862521444432751
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 3.7607831724991003,
+    "model__criterion": "gini",
+    "model__epochs": 7,
+    "model__max_depth": 9,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 426,
+    "model__min_count": 9,
+    "model__min_impurity_decrease": 2.880339761250308,
+    "model__min_samples_leaf": 7,
+    "model__min_samples_split": 2,
+    "model__min_weight_fraction_leaf": 0.27141659354960035,
+    "model__splitter": "random",
+    "model__vector_size": 2199,
+    "model__window": 4
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.8583808704598342,
+    "model__dual": false,
+    "model__epochs": 5,
+    "model__intercept_scaling": 1.7575552665424066,
+    "model__max_iter": 1097,
+    "model__min_count": 3,
+    "model__penalty": "l2",
+    "model__tol": 0.0006019752083178385,
+    "model__vector_size": 160,
+    "model__window": 10
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 12,
+    "model__min_count": 5,
+    "model__vector_size": 1291,
+    "model__window": 2
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.173162258066895,
+    "model__dual": false,
+    "model__intercept_scaling": 1.811715948360827,
+    "model__max_iter": 1794,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 23195031,
+    "model__tol": 0.00019762738591841677
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 5.6178914536353055,
+    "model__criterion": "gini",
+    "model__epochs": 23,
+    "model__max_depth": 8,
+    "model__max_features": "auto",
+    "model__max_leaf_nodes": 579,
+    "model__min_count": 6,
+    "model__min_impurity_decrease": 8.645445527250956,
+    "model__min_samples_leaf": 9,
+    "model__min_samples_split": 11,
+    "model__min_weight_fraction_leaf": 0.18119948235166633,
+    "model__splitter": "best",
+    "model__vector_size": 9109,
+    "model__window": 6
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 48842854
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.4760362580972397,
+    "model__dual": false,
+    "model__intercept_scaling": 9.464139233656663,
+    "model__max_iter": 1429,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 16110505,
+    "model__tol": 0.0004448397317581318
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.0608923663889431,
+    "model__dual": false,
+    "model__epochs": 22,
+    "model__intercept_scaling": 9.133969113594326,
+    "model__max_iter": 107,
+    "model__min_count": 5,
+    "model__penalty": "l2",
+    "model__tol": 0.0001031660572876346,
+    "model__vector_size": 4965,
+    "model__window": 5
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 25,
+    "model__min_count": 3,
+    "model__vector_size": 9371,
+    "model__window": 3
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.9349094506886462,
+    "model__dual": false,
+    "model__epochs": 8,
+    "model__intercept_scaling": 7.339955508987669,
+    "model__max_iter": 890,
+    "model__min_count": 9,
+    "model__penalty": "l1",
+    "model__tol": 0.0006179417670981756,
+    "model__vector_size": 9340,
+    "model__window": 2
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 4.115597288184484,
+    "model__epochs": 8,
+    "model__min_count": 4,
+    "model__vector_size": 9502,
+    "model__window": 8
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.940121225311339,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 37148385
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.44373178116593615,
+    "model__epochs": 6,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.9197857343380432,
+    "model__max_iter": 108,
+    "model__min_count": 9,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 8.150213617328094e-05,
+    "model__vector_size": 3178,
+    "model__window": 5
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 1.7650474508821465,
+    "model__epochs": 14,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.39049423281551354,
+    "model__max_iter": 974,
+    "model__min_count": 5,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.00043900440903198515,
+    "model__vector_size": 8765,
+    "model__window": 5
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.05528192048882,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.5823226774311205,
+    "model__max_iter": 995,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 15300570,
+    "model__tol": 0.00013702948842861783
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 11,
+    "model__min_count": 4,
+    "model__vector_size": 673,
+    "model__window": 5
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.2356596413298955,
+    "model__dual": false,
+    "model__epochs": 16,
+    "model__intercept_scaling": 8.140806384660698,
+    "model__max_iter": 1539,
+    "model__min_count": 6,
+    "model__penalty": "l2",
+    "model__tol": 0.00011648688987731093,
+    "model__vector_size": 550,
+    "model__window": 4
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 11,
+    "model__min_count": 7,
+    "model__vector_size": 3584,
+    "model__window": 6
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 2.0642942322783613,
+    "model__dual": false,
+    "model__epochs": 25,
+    "model__intercept_scaling": 8.253081764199006,
+    "model__max_iter": 1926,
+    "model__min_count": 3,
+    "model__penalty": "l1",
+    "model__tol": 0.0004538475200713612,
+    "model__vector_size": 7403,
+    "model__window": 5
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 1186051
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.23358617169471155,
+    "model__dual": false,
+    "model__intercept_scaling": 1.4084556002125115,
+    "model__max_iter": 267,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 37983134,
+    "model__tol": 6.26263071969394e-05
+}{
+    "model": "TFIDFGaussianNB",
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 5041806
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 7,
+    "model__min_count": 7,
+    "model__vector_size": 391,
+    "model__window": 6
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 0.13310842109126142,
+    "model__criterion": "gini",
+    "model__epochs": 19,
+    "model__max_depth": 2,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 876,
+    "model__min_count": 6,
+    "model__min_impurity_decrease": 0.07605401378201648,
+    "model__min_samples_leaf": 6,
+    "model__min_samples_split": 18,
+    "model__min_weight_fraction_leaf": 0.10258709425896473,
+    "model__splitter": "best",
+    "model__vector_size": 8348,
+    "model__window": 10
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 4.18666406633267,
+    "model__criterion": "entropy",
+    "model__epochs": 16,
+    "model__max_depth": 10,
+    "model__max_features": "sqrt",
+    "model__max_leaf_nodes": 370,
+    "model__min_count": 8,
+    "model__min_impurity_decrease": 3.01484248969365,
+    "model__min_samples_leaf": 4,
+    "model__min_samples_split": 6,
+    "model__min_weight_fraction_leaf": 0.07386662829545693,
+    "model__splitter": "random",
+    "model__vector_size": 3079,
+    "model__window": 10
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.10665591060550597,
+    "model__dual": false,
+    "model__intercept_scaling": 10.06488496157841,
+    "model__max_iter": 1743,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__tfidf_max_features": 41290566,
+    "model__tol": 0.0007188060275916422
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 4.5804408686291085,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 49676260
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 5,
+    "model__min_count": 6,
+    "model__vector_size": 6595,
+    "model__window": 3
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.4895997847748499,
+    "model__dual": false,
+    "model__intercept_scaling": 8.164094214641283,
+    "model__max_iter": 1014,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 362406,
+    "model__tol": 0.0005026359587271752
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 9.975843403572313,
+    "model__criterion": "gini",
+    "model__epochs": 17,
+    "model__max_depth": 3,
+    "model__max_features": "log2",
+    "model__max_leaf_nodes": 269,
+    "model__min_count": 6,
+    "model__min_impurity_decrease": 3.7995683067320742,
+    "model__min_samples_leaf": 14,
+    "model__min_samples_split": 16,
+    "model__min_weight_fraction_leaf": 0.24539580699256813,
+    "model__splitter": "random",
+    "model__vector_size": 1236,
+    "model__window": 1
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.6581286998602232,
+    "model__dual": false,
+    "model__intercept_scaling": 4.8989339276719805,
+    "model__max_iter": 827,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 49983746,
+    "model__tol": 0.0005084274878910291
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 0.9527677027626241,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 11841566
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.5201412024592263,
+    "model__dual": false,
+    "model__intercept_scaling": 0.8880879987263567,
+    "model__max_iter": 1649,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 6455929,
+    "model__tol": 0.0009754112452043682
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.5482483094006901,
+    "model__epochs": 11,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.23692442862356755,
+    "model__max_iter": 175,
+    "model__min_count": 1,
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tol": 0.0006673091484178706,
+    "model__vector_size": 1432,
+    "model__window": 7
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 1.3466388803982898,
+    "model__dual": false,
+    "model__epochs": 18,
+    "model__intercept_scaling": 8.597002501123532,
+    "model__max_iter": 416,
+    "model__min_count": 10,
+    "model__penalty": "l2",
+    "model__tol": 0.0008954165672384203,
+    "model__vector_size": 6266,
+    "model__window": 9
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 1.9031544000749223,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 41161040
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.2303531337434293,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.3525139671601829,
+    "model__max_iter": 223,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 10576260,
+    "model__tol": 0.00010626319961533103
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.9840852054786827,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.36253613381946037,
+    "model__max_iter": 658,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 10293820,
+    "model__tol": 0.0008347959322367794
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 1.4102408250989227,
+    "model__dual": false,
+    "model__intercept_scaling": 2.969044931657637,
+    "model__max_iter": 772,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 2847730,
+    "model__tol": 0.0005699045649571356
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.4400290499867787,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.5668279998518169,
+    "model__max_iter": 595,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 1461073,
+    "model__tol": 0.0008857033482617511
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.6071426344346147,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 20739599
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 1.972830052122109,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.39840060782821307,
+    "model__max_iter": 399,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 37702465,
+    "model__tol": 0.0008124327763615298
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.35337490313716324,
+    "model__dual": false,
+    "model__epochs": 14,
+    "model__intercept_scaling": 5.451987228501714,
+    "model__max_iter": 951,
+    "model__min_count": 9,
+    "model__penalty": "l2",
+    "model__tol": 0.00026619266362742835,
+    "model__vector_size": 9009,
+    "model__window": 10
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.3883110397312842,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.8657682764868088,
+    "model__max_iter": 465,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 47534303,
+    "model__tol": 0.00030710615118532806
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 6,
+    "model__min_count": 3,
+    "model__vector_size": 2762,
+    "model__window": 3
+}{
+    "model": "TFIDFLogisticRegression",
+    "model__C": 0.9370089839830184,
+    "model__fit_intercept": false,
+    "model__l1_ratio": 0.7440222677763183,
+    "model__max_iter": 567,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l2",
+    "model__solver": "saga",
+    "model__tfidf_max_features": 4986484,
+    "model__tol": 0.000237957886388925
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 0.6787031884959606,
+    "model__epochs": 6,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.1994792511739839,
+    "model__max_iter": 144,
+    "model__min_count": 10,
+    "model__penalty": "none",
+    "model__solver": "saga",
+    "model__tol": 0.0005513065034523396,
+    "model__vector_size": 9227,
+    "model__window": 9
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 1.3955344842795236,
+    "model__criterion": "entropy",
+    "model__epochs": 10,
+    "model__max_depth": 4,
+    "model__max_features": "auto",
+    "model__max_leaf_nodes": 69,
+    "model__min_count": 3,
+    "model__min_impurity_decrease": 2.859403329845226,
+    "model__min_samples_leaf": 15,
+    "model__min_samples_split": 10,
+    "model__min_weight_fraction_leaf": 0.3908560616829997,
+    "model__splitter": "best",
+    "model__vector_size": 4472,
+    "model__window": 7
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 3.692785838939982,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 45387035
+}{
+    "model": "W2VLogisticRegression",
+    "model__C": 2.017302815607997,
+    "model__epochs": 24,
+    "model__fit_intercept": true,
+    "model__l1_ratio": 0.17184875013216072,
+    "model__max_iter": 358,
+    "model__min_count": 10,
+    "model__penalty": "elasticnet",
+    "model__solver": "saga",
+    "model__tol": 0.0006734336817301521,
+    "model__vector_size": 7044,
+    "model__window": 9
+}{
+    "model": "TFIDFLinearSVC",
+    "model__C": 0.17382197736862728,
+    "model__dual": false,
+    "model__intercept_scaling": 0.3787553981325641,
+    "model__max_iter": 150,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__penalty": "l1",
+    "model__tfidf_max_features": 24553972,
+    "model__tol": 0.00031856615522852784
+}{
+    "model": "W2VMultinomialNB",
+    "model__alpha": 2.616388459413294,
+    "model__epochs": 21,
+    "model__min_count": 8,
+    "model__vector_size": 810,
+    "model__window": 4
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 4.244056468010635,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 27650970
+}{
+    "model": "TFIDFMultinomialNB",
+    "model__alpha": 2.4918634211065713,
+    "model__ngram_range": [
+        1,
+        2
+    ],
+    "model__tfidf_max_features": 31755473
+}{
+    "model": "W2VGaussianNB",
+    "model__epochs": 11,
+    "model__min_count": 4,
+    "model__vector_size": 9220,
+    "model__window": 1
+}{
+    "model": "W2VLinearSVC",
+    "model__C": 0.14525864368038902,
+    "model__dual": false,
+    "model__epochs": 6,
+    "model__intercept_scaling": 3.937864706179297,
+    "model__max_iter": 468,
+    "model__min_count": 10,
+    "model__penalty": "l1",
+    "model__tol": 0.0006879027362195966,
+    "model__vector_size": 8478,
+    "model__window": 1
+}{
+    "model": "W2VDecisionTreeClassifier",
+    "model__ccp_alpha": 3.197226636512509,
+    "model__criterion": "entropy",
+    "model__epochs": 23,
+    "model__max_depth": 4,
+    "model__max_features": "sqrt",
+    "model__max_leaf_nodes": 47,
+    "model__min_count": 7,
+    "model__min_impurity_decrease": 7.306723693601619,
+    "model__min_samples_leaf": 15,
+    "model__min_samples_split": 18,
+    "model__min_weight_fraction_leaf": 0.41563540334386967,
+    "model__splitter": "random",
+    "model__vector_size": 4410,
+    "model__window": 1
+}
