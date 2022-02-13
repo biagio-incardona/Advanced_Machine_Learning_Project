@@ -1,12 +1,15 @@
+from settings import BASE_DIR
 from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import LinearSVC
 from sklearn.linear_model import LogisticRegression
 from importlib.machinery import SourceFileLoader
 from sklearn.preprocessing import MinMaxScaler
-foo = SourceFileLoader("myWord2Vec",
-                       "C:\\Users\\biagi\\Desktop\\university\\Second Year\\First Semester\\advanced machine learning\\prog\\Advanced_Machine_Learning_Project\\ML\\myWord2Vec.py").load_module()
+foo = SourceFileLoader(
+    "myWord2Vec", "{BaseDir}/Advanced_Machine_Learning_Project/ML/myWord2Vec.py".format(BaseDir=BASE_DIR)
+).load_module()
 import myWord2Vec as w2v
+
 
 class W2VGaussianNB(GaussianNB):
     def __init__(self,

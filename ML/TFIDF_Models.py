@@ -1,11 +1,14 @@
+from settings import BASE_DIR
 from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import LinearSVC
 from sklearn.linear_model import LogisticRegression
 from importlib.machinery import SourceFileLoader
-foo = SourceFileLoader("myTFIDF",
-                       "C:\\Users\\biagi\\Desktop\\university\\Second Year\\First Semester\\advanced machine learning\\prog\\Advanced_Machine_Learning_Project\\ML\\myTFIDF.py").load_module()
+foo = SourceFileLoader(
+    "myTFIDF", "{BaseDir}/Advanced_Machine_Learning_Project/ML/myTFIDF.py".format(BaseDir=BASE_DIR)
+).load_module()
 import myTFIDF as mtfidf
+
 
 class TFIDFGaussianNB(GaussianNB):
     def __init__(self, *, tfidf_max_features=100, ngram_range=(1, 2), priors=None, var_smoothing=1e-9):
@@ -22,7 +25,8 @@ class TFIDFGaussianNB(GaussianNB):
         #tfidf = mtfidf.myTFIDF(self.tfidf_max_features, self.ngram_range)
         X = self.tfidf.df_tfidf_vectorize(X).todense()
         return super().predict(X)
-        
+
+
 class TFIDFMultinomialNB(MultinomialNB):
     def __init__(self, *, tfidf_max_features=100, ngram_range=(1, 2), alpha=1.0, fit_prior=True, class_prior=None):
         super().__init__(alpha=alpha, fit_prior=fit_prior, class_prior=class_prior)
@@ -38,7 +42,8 @@ class TFIDFMultinomialNB(MultinomialNB):
         #tfidf = mtfidf.myTFIDF(self.max_features, self.ngram_range)
         X = self.tfidf.df_tfidf_vectorize(X)
         return super().predict(X)
-        
+
+
 class TFIDFDecisionTreeClassifier(DecisionTreeClassifier):
     def __init__(self,
                  *,
@@ -80,7 +85,8 @@ class TFIDFDecisionTreeClassifier(DecisionTreeClassifier):
     def predict(self, X, check_input=True):
         X = self.tfidf.df_tfidf_vectorize(X)
         return super().predict(X=X, check_input=check_input)
-    
+
+
 class TFIDFLinearSVC(LinearSVC):
     def __init__(self,
                  *,
@@ -122,7 +128,8 @@ class TFIDFLinearSVC(LinearSVC):
     def predict(self, X):
         X = self.tfidf.df_tfidf_vectorize(X)
         return super().predict(X)
-    
+
+
 class TFIDFLogisticRegression(LogisticRegression):
     def __init__(self,
                  *,
