@@ -43,6 +43,10 @@ class W2VGaussianNB(GaussianNB):
         #W2V = mW2V.myW2V(self.W2V_max_features, self.ngram_range)
         X = self.W2V.df_w2v_vectorize(X)
         return super().predict(X)
+    
+    def predict_proba(self, X):
+        X = self.W2V.df_w2v_vectorize(X)
+        return super().predict_proba(X)
         
 class W2VMultinomialNB(MultinomialNB):
     def __init__(self,
@@ -80,6 +84,11 @@ class W2VMultinomialNB(MultinomialNB):
         X = self.W2V.df_w2v_vectorize(X)
         X = self.scaler.transform(X)
         return super().predict(X)
+    
+    def predict_proba(self, X):
+        X = self.W2V.df_w2v_vectorize(X)
+        X = self.scaler.transform(X)
+        return super().predict_proba(X)
         
 class W2VDecisionTreeClassifier(DecisionTreeClassifier):
     def __init__(self,
@@ -132,6 +141,10 @@ class W2VDecisionTreeClassifier(DecisionTreeClassifier):
     def predict(self, X, check_input=True):
         X = self.W2V.df_w2v_vectorize(X)
         return super().predict(X=X, check_input=check_input)
+    
+    def predict_proba(self, X, check_input=True):
+        X = self.W2V.df_w2v_vectorize(X)
+        return super().predict_proba(X, check_input=check_input)
     
 class W2VLinearSVC(LinearSVC):
     def __init__(self,
@@ -243,4 +256,8 @@ class W2VLogisticRegression(LogisticRegression):
     def predict(self, X):
         X = self.W2V.df_w2v_vectorize(X)
         return super().predict(X)
+    
+    def predict_proba(self, X):
+        X = self.W2V.df_w2v_vectorize(X)
+        return super().predict_proba(X)
           
