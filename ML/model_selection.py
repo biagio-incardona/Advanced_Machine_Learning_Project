@@ -84,8 +84,6 @@ def apply_random_search(pip, params_grid, X_train, Y_train):
     results = pd.DataFrame(columns=["model", "mean_fit_time", "mean_score_time", "mean_train_score", "mean_test_score"])
     for i in range(10):
         trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=1, n_jobs=1, return_train_score=True)
-        print("a:{}".format(trys))
-        break
         search = trys.fit(X_train, Y_train)
         search = search.cv_results_
         model = search['params'][0]
