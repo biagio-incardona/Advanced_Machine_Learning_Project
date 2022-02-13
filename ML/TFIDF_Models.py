@@ -22,6 +22,9 @@ class TFIDFGaussianNB(GaussianNB):
         #tfidf = mtfidf.myTFIDF(self.tfidf_max_features, self.ngram_range)
         X = self.tfidf.df_tfidf_vectorize(X).todense()
         return super().predict(X)
+    def predict_proba(self, X):
+        X = self.tfidf.df_tfidf_vectorize(X).todense()
+        return super().predict_proba(X)
         
 class TFIDFMultinomialNB(MultinomialNB):
     def __init__(self, *, tfidf_max_features=100, ngram_range=(1, 2), alpha=1.0, fit_prior=True, class_prior=None):
@@ -38,6 +41,10 @@ class TFIDFMultinomialNB(MultinomialNB):
         #tfidf = mtfidf.myTFIDF(self.max_features, self.ngram_range)
         X = self.tfidf.df_tfidf_vectorize(X)
         return super().predict(X)
+    
+    def predict_proba(self, X):
+        X = self.tfidf.df_tfidf_vectorize(X)
+        return super().predict_proba(X)
         
 class TFIDFDecisionTreeClassifier(DecisionTreeClassifier):
     def __init__(self,
@@ -80,6 +87,10 @@ class TFIDFDecisionTreeClassifier(DecisionTreeClassifier):
     def predict(self, X, check_input=True):
         X = self.tfidf.df_tfidf_vectorize(X)
         return super().predict(X=X, check_input=check_input)
+    
+    def predict_proba(self, X):
+        X = self.tfidf.df_tfidf_vectorize(X)
+        return super().predict_proba(X)
     
 class TFIDFLinearSVC(LinearSVC):
     def __init__(self,
@@ -170,3 +181,6 @@ class TFIDFLogisticRegression(LogisticRegression):
         X = self.tfidf.df_tfidf_vectorize(X)
         return super().predict(X)
           
+    def predict_proba(self, X):
+        X = self.tfidf.df_tfidf_vectorize(X)
+        return super().predict_proba(X)
