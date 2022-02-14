@@ -242,7 +242,7 @@ def main():
                         model__l1_ratio=dists.uniform(0.0, 1.0)
                         )]
 
-    apply_random_search(pip, params_grid, X_train, Y_train, "fratelliiii")
+    apply_random_search(pip, params_grid, X_train, Y_train, "RandomSearchModelResults")
 
 
 if __name__ == "__main__":
