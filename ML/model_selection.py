@@ -1,4 +1,3 @@
-from settings import BASE_DIR
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -12,6 +11,11 @@ from importlib.machinery import SourceFileLoader
 
 # importing the add module from the custom packases using the path
 # useful only if you are running in IPython
+#foo = SourceFileLoader(
+#    "settings", "C:\\Users\\biagi\\Desktop\\university\\Second Year\\First Semester\\advanced machine learning\\prog\\Advanced_Machine_Learning_Project\\settings.py"
+#).load_module()
+
+from settings import BASE_DIR
 foo = SourceFileLoader(
     "TFIDF_Models", "{BaseDir}/Advanced_Machine_Learning_Project/ML/TFIDF_Models.py".format(BaseDir=BASE_DIR)
 ).load_module()
@@ -78,31 +82,26 @@ def model_evaluate(model, X, Y):
     plt.ylabel("Actual values", fontdict={'size': 14}, labelpad=10)
     plt.title("Confusion Matrix", fontdict={'size': 18}, pad=20)
 
+def save_results(search, file_name):
+  search = search.cv_results_
+  for i in range(len(search['params'])):
+    model = search['params'][i]
+    model['model']=str(model['model'])
+    model['model'] = model['model'][:model['model'].find('(')]
+    model['mean_test_score'] = search['mean_test_score'][i]
+    model['mean_score_time'] = search['mean_score_time'][i]
+    model['mean_fit_time'] = search['mean_fit_time'][i]
+    model["mean_train_score"] = search['mean_train_score'][i]
+    with open("{BaseDir}/Advanced_Machine_Learning_Project/ML/{FileName}.json".format(BaseDir=BASE_DIR, FileName=file_name),'a') as f:
+      json.dump(model, f,indent=4)
 
 # must be removed when sending the project
-def apply_random_search(pip, params_grid, X_train, Y_train):
+def apply_random_search(pip, params_grid, X_train, Y_train, results_file_name):
     results = pd.DataFrame(columns=["model", "mean_fit_time", "mean_score_time", "mean_train_score", "mean_test_score"])
     for i in range(10):
         trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=1, n_jobs=1, return_train_score=True)
         search = trys.fit(X_train, Y_train)
-        search = search.cv_results_
-        model = search['params'][0]
-        model['model'] = str(model['model'])
-        model['model'] = model['model'][:model['model'].find('(')]
-        df = {'model': [model['model']],
-              'mean_fit_time': [search['mean_fit_time'][0]],
-              'mean_score_time': [search['mean_score_time'][0]],
-              'mean_train_score': [search['mean_train_score'][0]],
-              'mean_test_score': [search['mean_test_score'][0]]}
-        results = results.append(pd.DataFrame(df))
-        print(results)
-        pd.DataFrame(results).to_csv(
-            'C:\\Users\\biagi\\Desktop\\university\\Second Year\\First Semester\\advanced machine learning\\prog\\Advanced_Machine_Learning_Project\\ML\\results_2.csv')
-        with open(
-                "C:\\Users\\biagi\\Desktop\\university\\Second Year\\First Semester\\advanced machine learning\\prog\\Advanced_Machine_Learning_Project\\ML\\model_params2.json",
-                'a') as f:
-            json.dump(model, f, indent=4)
-
+        save_results(search, results_file_name)
 
 def main():
     path = "{BaseDir}/Advanced_Machine_Learning_Project/data/dataset.csv".format(BaseDir=BASE_DIR)
@@ -137,7 +136,7 @@ def main():
     sbStem = SnowballStemmer("english", True)
     preprocess = ps.Preprocess(negations, emojis, regex_subs, sbStem)
     df = load_dataset(path, columns, final_columns)
-    df = resize(df, 50000, "sentiment", 4)
+    df = resize(df, 500, "sentiment", 4)
     df = preprocess.df_pre_process(df, "text", "sentiment")
     X_train, X_test, Y_train, Y_test = df_train_test_split(df, "text", "sentiment", test_size=0.05)
 
@@ -243,7 +242,7 @@ def main():
                         model__l1_ratio=dists.uniform(0.0, 1.0)
                         )]
 
-    apply_random_search(pip, params_grid, X_train, Y_train)
+    apply_random_search(pip, params_grid, X_train, Y_train, "RandomSearchModelResults")
 
 
 if __name__ == "__main__":
