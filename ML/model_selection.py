@@ -136,7 +136,7 @@ def main():
     sbStem = SnowballStemmer("english", True)
     preprocess = ps.Preprocess(negations, emojis, regex_subs, sbStem)
     df = load_dataset(path, columns, final_columns)
-    df = resize(df, 500, "sentiment", 4)
+    df = resize(df, 50000, "sentiment", 4)
     df = preprocess.df_pre_process(df, "text", "sentiment")
     X_train, X_test, Y_train, Y_test = df_train_test_split(df, "text", "sentiment", test_size=0.05)
 
@@ -242,7 +242,7 @@ def main():
                         model__l1_ratio=dists.uniform(0.0, 1.0)
                         )]
 
-    apply_random_search(pip, params_grid, X_train, Y_train, "RandomSearchModelResults")
+    apply_random_search(pip, params_grid, X_train, Y_train, "fratelliiii")
 
 
 if __name__ == "__main__":
