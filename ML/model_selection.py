@@ -82,18 +82,22 @@ def model_evaluate(model, X, Y):
     plt.ylabel("Actual values", fontdict={'size': 14}, labelpad=10)
     plt.title("Confusion Matrix", fontdict={'size': 18}, pad=20)
 
+
 def save_results(search, file_name):
-  search = search.cv_results_
-  for i in range(len(search['params'])):
-    model = search['params'][i]
-    model['model']=str(model['model'])
-    model['model'] = model['model'][:model['model'].find('(')]
-    model['mean_test_score'] = search['mean_test_score'][i]
-    model['mean_score_time'] = search['mean_score_time'][i]
-    model['mean_fit_time'] = search['mean_fit_time'][i]
-    model["mean_train_score"] = search['mean_train_score'][i]
-    with open("{BaseDir}/Advanced_Machine_Learning_Project/ML/{FileName}.json".format(BaseDir=BASE_DIR, FileName=file_name),'a') as f:
-      json.dump(model, f,indent=4)
+    search = search.cv_results_
+    for i in range(len(search['params'])):
+        model = search['params'][i]
+        model['model'] = str(model['model'])
+        model['model'] = model['model'][:model['model'].find('(')]
+        model['mean_test_score'] = search['mean_test_score'][i]
+        model['mean_score_time'] = search['mean_score_time'][i]
+        model['mean_fit_time'] = search['mean_fit_time'][i]
+        model["mean_train_score"] = search['mean_train_score'][i]
+        with open("{BaseDir}/Advanced_Machine_Learning_Project/ML/{FileName}.json".format(BaseDir=BASE_DIR,
+                                                                                          FileName=file_name),
+                  'a') as f:
+            json.dump(model, f, indent=4)
+
 
 # must be removed when sending the project
 def apply_random_search(pip, params_grid, X_train, Y_train, results_file_name):
@@ -102,6 +106,7 @@ def apply_random_search(pip, params_grid, X_train, Y_train, results_file_name):
         trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=1, n_jobs=1, return_train_score=True)
         search = trys.fit(X_train, Y_train)
         save_results(search, results_file_name)
+
 
 def main():
     path = "{BaseDir}/Advanced_Machine_Learning_Project/data/dataset.csv".format(BaseDir=BASE_DIR)
