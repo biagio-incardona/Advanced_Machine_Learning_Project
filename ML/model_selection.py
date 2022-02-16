@@ -98,46 +98,12 @@ def save_results(search, file_name):
 # must be removed when sending the project
 def apply_random_search(pip, params_grid, X_train, Y_train, results_file_name):
     results = pd.DataFrame(columns=["model", "mean_fit_time", "mean_score_time", "mean_train_score", "mean_test_score"])
-    for i in range(10):
-        trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=1, n_jobs=1, return_train_score=True)
-        search = trys.fit(X_train, Y_train)
-        save_results(search, results_file_name)
+    #for i in range(10):
+    trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=15, n_jobs=-1, return_train_score=True)
+    search = trys.fit(X_train, Y_train)
+    save_results(search, results_file_name)
 
-def main():
-    path = "{BaseDir}/Advanced_Machine_Learning_Project/data/dataset.csv".format(BaseDir=BASE_DIR)
-    columns = ["sentiment", "ids", "date", "flag", "user", "text"]
-    final_columns = ["text", "sentiment"]
-
-    # explicit negations
-    negations = {"isn't": "is not", "aren't": "are not", "wasn't": "was not", "weren't": "were not",
-                 "haven't": "have not", "hasn't": "has not", "hadn't": "had not", "won't": "will not",
-                 "wouldn't": "would not", "don't": "do not", "doesn't": "does not", "didn't": "did not",
-                 "can't": "can not", "couldn't": "could not", "shouldn't": "should not", "mightn't": "might not",
-                 "mustn't": "must not"}
-
-    # convert twitter emojis in twitch style emojis
-    emojis = {':)': 'smile', ':-)': 'smile', ';d': 'wink', ':-E': 'vampire', ':(': 'sad',
-              ':-(': 'sad', ':-<': 'sad', ':P': 'raspberry', ':O': 'surprised',
-              ':-@': 'shocked', ':@': 'shocked', ':-$': 'confused',
-              ':#': 'mute', ':X': 'mute', ':^)': 'smile', ':-&': 'confused', '$_$': 'greedy',
-              '@@': 'eyeroll', ':-!': 'confused', ':-D': 'smile', ':-0': 'yell', 'O.o': 'confused',
-              '<(-_-)>': 'robot', 'd[-_-]b': 'dj', ":'-)": 'sadsmile', ';)': 'wink',
-              ';-)': 'wink', 'O:-)': 'angel', 'O*-)': 'angel', '(:-D': 'gossip', '=^.^=': 'cat'}
-
-    regex_subs = {
-        r"https?://[^s]+": "URL",  # replace any url with URL
-        "www.[^ ]+": "URL",  # replace any url with URL
-        r"@[^\s]+": "USR",  # replace any user tag with USR (the tag system is the same also in twitch)
-        r"(.)\1\1+": r"\1\1",  # replace 3 consecutive chars with 2
-        r"[\s]+": " ",  # remove consec spaces
-        "#[a-z0-9]*": ""  # remove hashtags, they are not used in twitch chats
-    }
-
-    sbStem = SnowballStemmer("english", True)
-    preprocess = ps.Preprocess(negations, emojis, regex_subs, sbStem)
-    df = load_dataset(path, columns, final_columns)
-    df = resize(df, 50000, "sentiment", 4)
-    df = preprocess.df_pre_process(df, "text", "sentiment")
+def first_screening(df):
     X_train, X_test, Y_train, Y_test = df_train_test_split(df, "text", "sentiment", test_size=0.05)
 
     w2v1 = w2v.W2VDecisionTreeClassifier()
@@ -244,6 +210,69 @@ def main():
 
     apply_random_search(pip, params_grid, X_train, Y_train, "RandomSearchModelResults")
 
+def second_screening(df):
+    X_train, X_test, Y_train, Y_test = df_train_test_split(df, "text", "sentiment", test_size=0.05)
+
+    w2v1 = w2v.W2VDecisionTreeClassifier()
+
+    pip = Pipeline([('model', w2v1)])
+    params_grid = [dict(model=[cnb.TFIDFMultinomialNB()],
+                        model__tfidf_max_features=dists.randint(1, 50000000),
+                        model__ngram_range=[(1, 2)],
+                        model__alpha=dists.uniform(0, 5.0)
+                        ),
+                   dict(model=[cnb.TFIDFLogisticRegression()],
+                        model__tfidf_max_features=dists.randint(1, 50000000),
+                        model__ngram_range=[(1, 2)],
+                        model__penalty=['l1', 'l2', 'elasticnet', 'none'],
+                        model__tol=dists.uniform(0.00001, 0.001),
+                        model__C=dists.uniform(0.1, 2.0),
+                        model__fit_intercept=[True, False],
+                        model__solver=['saga'],
+                        model__max_iter=dists.randint(100, 1000 + 1),
+                        model__l1_ratio=dists.uniform(0.0, 1.0)
+                    )]
+
+    apply_random_search(pip, params_grid, X_train, Y_train, "second_screening_results")
+
+
+def main():
+    path = "{BaseDir}/Advanced_Machine_Learning_Project/data/dataset.csv".format(BaseDir=BASE_DIR)
+    columns = ["sentiment", "ids", "date", "flag", "user", "text"]
+    final_columns = ["text", "sentiment"]
+
+    # explicit negations
+    negations = {"isn't": "is not", "aren't": "are not", "wasn't": "was not", "weren't": "were not",
+                 "haven't": "have not", "hasn't": "has not", "hadn't": "had not", "won't": "will not",
+                 "wouldn't": "would not", "don't": "do not", "doesn't": "does not", "didn't": "did not",
+                 "can't": "can not", "couldn't": "could not", "shouldn't": "should not", "mightn't": "might not",
+                 "mustn't": "must not"}
+
+    # convert twitter emojis in twitch style emojis
+    emojis = {':)': 'smile', ':-)': 'smile', ';d': 'wink', ':-E': 'vampire', ':(': 'sad',
+              ':-(': 'sad', ':-<': 'sad', ':P': 'raspberry', ':O': 'surprised',
+              ':-@': 'shocked', ':@': 'shocked', ':-$': 'confused',
+              ':#': 'mute', ':X': 'mute', ':^)': 'smile', ':-&': 'confused', '$_$': 'greedy',
+              '@@': 'eyeroll', ':-!': 'confused', ':-D': 'smile', ':-0': 'yell', 'O.o': 'confused',
+              '<(-_-)>': 'robot', 'd[-_-]b': 'dj', ":'-)": 'sadsmile', ';)': 'wink',
+              ';-)': 'wink', 'O:-)': 'angel', 'O*-)': 'angel', '(:-D': 'gossip', '=^.^=': 'cat'}
+
+    regex_subs = {
+        r"https?://[^s]+": "URL",  # replace any url with URL
+        "www.[^ ]+": "URL",  # replace any url with URL
+        r"@[^\s]+": "USR",  # replace any user tag with USR (the tag system is the same also in twitch)
+        r"(.)\1\1+": r"\1\1",  # replace 3 consecutive chars with 2
+        r"[\s]+": " ",  # remove consec spaces
+        "#[a-z0-9]*": ""  # remove hashtags, they are not used in twitch chats
+    }
+
+    sbStem = SnowballStemmer("english", True)
+    preprocess = ps.Preprocess(negations, emojis, regex_subs, sbStem)
+    df = load_dataset(path, columns, final_columns)
+    #df = resize(df, 50000, "sentiment", 4)
+    df = preprocess.df_pre_process(df, "text", "sentiment")
+    #first_screening(df)
+    second_screening(df)
 
 if __name__ == "__main__":
     main()
