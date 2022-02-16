@@ -82,6 +82,7 @@ def model_evaluate(model, X, Y):
     plt.ylabel("Actual values", fontdict={'size': 14}, labelpad=10)
     plt.title("Confusion Matrix", fontdict={'size': 18}, pad=20)
 
+
 def save_results(search, file_name):
     search = search.cv_results_
     for i in range(len(search['params'])):
