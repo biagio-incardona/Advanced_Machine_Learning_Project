@@ -104,7 +104,7 @@ def save_results(search, file_name):
 def apply_random_search(pip, params_grid, X_train, Y_train, results_file_name):
     results = pd.DataFrame(columns=["model", "mean_fit_time", "mean_score_time", "mean_train_score", "mean_test_score"])
     for i in range(100):
-        trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=1, n_jobs=7, return_train_score=True)
+        trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=1, n_jobs=6, return_train_score=True)
         search = trys.fit(X_train, Y_train)
         save_results(search, results_file_name)
 
