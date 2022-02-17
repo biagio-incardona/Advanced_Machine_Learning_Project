@@ -1,4 +1,5 @@
-{
+[
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 0.05129690785322383,
     "model__ngram_range": [
@@ -10,7 +11,8 @@
     "mean_score_time": 7.920106267929077,
     "mean_fit_time": 71.55645418167114,
     "mean_train_score": 0.9451356907894738
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 0.7061857803340099,
     "model__ngram_range": [
@@ -22,7 +24,8 @@
     "mean_score_time": 8.344410037994384,
     "mean_fit_time": 75.27686347961426,
     "mean_train_score": 0.8919950657894736
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.28867977471125406,
     "model__fit_intercept": false,
@@ -40,7 +43,8 @@
     "mean_score_time": 8.136690998077393,
     "mean_fit_time": 1143.2716908454895,
     "mean_train_score": 0.9916087171052632
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 3.9042353850519325,
     "model__ngram_range": [
@@ -52,7 +56,8 @@
     "mean_score_time": 31.75321674346924,
     "mean_fit_time": 255.20577044486998,
     "mean_train_score": 0.8411699013157895
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.4158303662220696,
     "model__fit_intercept": false,
@@ -70,7 +75,8 @@
     "mean_score_time": 23.491223764419555,
     "mean_fit_time": 4184.080079269409,
     "mean_train_score": 0.991532894736842
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.8546504735709275,
     "model__fit_intercept": false,
@@ -88,7 +94,8 @@
     "mean_score_time": 17.42687029838562,
     "mean_fit_time": 4882.612340641022,
     "mean_train_score": 0.9916542763157894
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 3.4237005907602036,
     "model__ngram_range": [
@@ -100,7 +107,8 @@
     "mean_score_time": 24.223156356811522,
     "mean_fit_time": 211.84891004562377,
     "mean_train_score": 0.844555427631579
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.15542366113486952,
     "model__fit_intercept": true,
@@ -118,7 +126,8 @@
     "mean_score_time": 23.343613147735596,
     "mean_fit_time": 750.5702839374542,
     "mean_train_score": 0.8051488486842105
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 2.262081078244515,
     "model__ngram_range": [
@@ -130,7 +139,8 @@
     "mean_score_time": 19.840305662155153,
     "mean_fit_time": 193.7860502719879,
     "mean_train_score": 0.8420396381578946
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 3.966671515849793,
     "model__ngram_range": [
@@ -142,7 +152,8 @@
     "mean_score_time": 20.9008451461792,
     "mean_fit_time": 195.3381441116333,
     "mean_train_score": 0.8407656250000001
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 3.338087186919916,
     "model__ngram_range": [
@@ -154,7 +165,8 @@
     "mean_score_time": 21.612795495986937,
     "mean_fit_time": 194.55787658691406,
     "mean_train_score": 0.8452146381578947
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.5378070408152813,
     "model__fit_intercept": false,
@@ -172,7 +184,8 @@
     "mean_score_time": 9.610532236099242,
     "mean_fit_time": 4428.8441105365755,
     "mean_train_score": 0.9917873355263158
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 2.020223229227018,
     "model__ngram_range": [
@@ -184,7 +197,8 @@
     "mean_score_time": 19.9541925907135,
     "mean_fit_time": 190.58544273376464,
     "mean_train_score": 0.8592044407894737
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.9269705862837518,
     "model__fit_intercept": false,
@@ -202,7 +216,8 @@
     "mean_score_time": 22.131577444076537,
     "mean_fit_time": 31663.746467494966,
     "mean_train_score": 0.85804375
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.1045145244326042,
     "model__fit_intercept": true,
@@ -220,7 +235,8 @@
     "mean_score_time": 31.078810691833496,
     "mean_fit_time": 3722.3392557144166,
     "mean_train_score": 0.9909644736842104
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 4.608606306675148,
     "model__ngram_range": [
@@ -232,7 +248,8 @@
     "mean_score_time": 21.14685492515564,
     "mean_fit_time": 210.90240936279298,
     "mean_train_score": 0.8371824013157895
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 0.8414704262168193,
     "model__ngram_range": [
@@ -244,7 +261,8 @@
     "mean_score_time": 24.926441860198974,
     "mean_fit_time": 222.9332268714905,
     "mean_train_score": 0.8864458881578947
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.0865821076231317,
     "model__fit_intercept": true,
@@ -262,7 +280,8 @@
     "mean_score_time": 33.160303592681885,
     "mean_fit_time": 15684.271167850495,
     "mean_train_score": 0.8352578947368421
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 4.020383414147329,
     "model__ngram_range": [
@@ -274,7 +293,8 @@
     "mean_score_time": 28.924170684814452,
     "mean_fit_time": 258.25083966255187,
     "mean_train_score": 0.8405203947368423
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 2.0472129726134276,
     "model__fit_intercept": true,
@@ -292,7 +312,8 @@
     "mean_score_time": 24.97235426902771,
     "mean_fit_time": 384.79635825157163,
     "mean_train_score": 0.8939077302631577
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.29290398836524945,
     "model__fit_intercept": true,
@@ -310,7 +331,8 @@
     "mean_score_time": 22.57862639427185,
     "mean_fit_time": 360.8539542198181,
     "mean_train_score": 0.8348978618421052
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 4.800272304888162,
     "model__ngram_range": [
@@ -322,7 +344,8 @@
     "mean_score_time": 22.298344135284424,
     "mean_fit_time": 209.960875415802,
     "mean_train_score": 0.8362220394736843
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 1.0568501252608726,
     "model__ngram_range": [
@@ -334,7 +357,8 @@
     "mean_score_time": 23.38084135055542,
     "mean_fit_time": 203.2295403957367,
     "mean_train_score": 0.8792307565789473
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 1.4466788741175285,
     "model__ngram_range": [
@@ -346,7 +370,8 @@
     "mean_score_time": 22.868941259384155,
     "mean_fit_time": 199.54673671722412,
     "mean_train_score": 0.8694149671052631
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.5236377515075192,
     "model__fit_intercept": true,
@@ -364,7 +389,8 @@
     "mean_score_time": 49.29655537605286,
     "mean_fit_time": 18805.29101819992,
     "mean_train_score": 0.8436848684210526
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.6439076882375634,
     "model__fit_intercept": false,
@@ -382,7 +408,8 @@
     "mean_score_time": 23.445540809631346,
     "mean_fit_time": 18765.6139087677,
     "mean_train_score": 0.8494399671052631
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 1.9182378642823106,
     "model__ngram_range": [
@@ -394,7 +421,8 @@
     "mean_score_time": 29.436066770553587,
     "mean_fit_time": 280.45295906066895,
     "mean_train_score": 0.860867927631579
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 4.582290172354503,
     "model__ngram_range": [
@@ -406,7 +434,8 @@
     "mean_score_time": 23.80038466453552,
     "mean_fit_time": 247.7528461456299,
     "mean_train_score": 0.8048870065789474
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.6838925694765131,
     "model__fit_intercept": true,
@@ -424,7 +453,8 @@
     "mean_score_time": 52.67932920455932,
     "mean_fit_time": 3585.63197889328,
     "mean_train_score": 0.990847697368421
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.24164264417273765,
     "model__fit_intercept": true,
@@ -442,7 +472,8 @@
     "mean_score_time": 40.29271559715271,
     "mean_fit_time": 2141.6653334617613,
     "mean_train_score": 0.8126050986842104
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.5101426385279334,
     "model__fit_intercept": true,
@@ -460,7 +491,8 @@
     "mean_score_time": 28.652193307876587,
     "mean_fit_time": 394.3413652420044,
     "mean_train_score": 0.848003125
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 2.837341230013552,
     "model__ngram_range": [
@@ -472,7 +504,8 @@
     "mean_score_time": 27.058522987365723,
     "mean_fit_time": 225.36142339706421,
     "mean_train_score": 0.8495993421052631
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.1495190529683965,
     "model__fit_intercept": false,
@@ -490,7 +523,8 @@
     "mean_score_time": 15.696848058700562,
     "mean_fit_time": 3485.839098930359,
     "mean_train_score": 0.991475
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 1.94341052346739,
     "model__ngram_range": [
@@ -502,7 +536,8 @@
     "mean_score_time": 25.81456141471863,
     "mean_fit_time": 249.2027856349945,
     "mean_train_score": 0.8602631578947368
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 0.11812585496968953,
     "model__ngram_range": [
@@ -514,7 +549,8 @@
     "mean_score_time": 22.38183465003967,
     "mean_fit_time": 263.4526979446411,
     "mean_train_score": 0.9353251644736842
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 4.77559926085516,
     "model__ngram_range": [
@@ -526,7 +562,8 @@
     "mean_score_time": 25.472960329055788,
     "mean_fit_time": 230.05847997665404,
     "mean_train_score": 0.8361572368421053
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 0.8850373375175741,
     "model__ngram_range": [
@@ -538,7 +575,8 @@
     "mean_score_time": 28.46161255836487,
     "mean_fit_time": 264.05802526473997,
     "mean_train_score": 0.8848320723684211
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.19083519509745953,
     "model__fit_intercept": true,
@@ -556,7 +594,8 @@
     "mean_score_time": 27.049052047729493,
     "mean_fit_time": 2910.9589745998383,
     "mean_train_score": 0.9907143092105264
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 3.20446977092991,
     "model__ngram_range": [
@@ -568,7 +607,8 @@
     "mean_score_time": 32.65933156013489,
     "mean_fit_time": 243.02700891494752,
     "mean_train_score": 0.8461672697368421
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.18166044293584607,
     "model__fit_intercept": false,
@@ -586,7 +626,8 @@
     "mean_score_time": 35.2944091796875,
     "mean_fit_time": 5137.8443881034855,
     "mean_train_score": 0.9916402960526316
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 1.2325728515914858,
     "model__ngram_range": [
@@ -598,7 +639,8 @@
     "mean_score_time": 22.329121541976928,
     "mean_fit_time": 221.91634440422058,
     "mean_train_score": 0.8742771381578948
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 0.49101932535653037,
     "model__ngram_range": [
@@ -610,7 +652,8 @@
     "mean_score_time": 22.446458959579466,
     "mean_fit_time": 230.7444149017334,
     "mean_train_score": 0.9029677631578947
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.4186042669538591,
     "model__fit_intercept": true,
@@ -628,7 +671,8 @@
     "mean_score_time": 34.5265450000763,
     "mean_fit_time": 3547.4184164524077,
     "mean_train_score": 0.990919572368421
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 3.2087734134749537,
     "model__ngram_range": [
@@ -640,7 +684,8 @@
     "mean_score_time": 21.535532426834106,
     "mean_fit_time": 200.54409346580505,
     "mean_train_score": 0.8461343750000001
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.413155071695708,
     "model__fit_intercept": false,
@@ -658,7 +703,8 @@
     "mean_score_time": 22.413215494155885,
     "mean_fit_time": 371.39658546447754,
     "mean_train_score": 0.8804810855263158
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 1.8664436625184335,
     "model__fit_intercept": true,
@@ -676,7 +722,8 @@
     "mean_score_time": 16.301882791519166,
     "mean_fit_time": 13401.961143493652,
     "mean_train_score": 0.850225
-}{
+},
+    {
     "model": "TFIDFMultinomialNB",
     "model__alpha": 1.491807213260813,
     "model__ngram_range": [
@@ -688,7 +735,8 @@
     "mean_score_time": 27.85650701522827,
     "mean_fit_time": 245.47838158607482,
     "mean_train_score": 0.8683197368421054
-}{
+},
+    {
     "model": "TFIDFLogisticRegression",
     "model__C": 0.5854128924676655,
     "model__fit_intercept": false,
@@ -707,3 +755,4 @@
     "mean_fit_time": 18724.629264974596,
     "mean_train_score": 0.8325748355263158
 }
+]
