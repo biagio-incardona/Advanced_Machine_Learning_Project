@@ -103,10 +103,10 @@ def save_results(search, file_name):
 # must be removed when sending the project
 def apply_random_search(pip, params_grid, X_train, Y_train, results_file_name):
     results = pd.DataFrame(columns=["model", "mean_fit_time", "mean_score_time", "mean_train_score", "mean_test_score"])
-    for i in range(100):
-        trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=1, n_jobs=6, return_train_score=True)
-        search = trys.fit(X_train, Y_train)
-        save_results(search, results_file_name)
+    # for i in range(10):
+    trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=1, n_jobs=6, return_train_score=True)
+    search = trys.fit(X_train, Y_train)
+    save_results(search, results_file_name)
 
 
 def first_screening(df):
@@ -243,27 +243,6 @@ def second_screening(df):
     apply_random_search(pip, params_grid, X_train, Y_train, "second_screening_results")
 
 
-def final_screening(df):
-    X_train, X_test, Y_train, Y_test = df_train_test_split(df, "text", "sentiment", test_size=0.05)
-
-    w2v1 = w2v.W2VDecisionTreeClassifier()
-
-    pip = Pipeline([('model', w2v1)])
-    params_grid = [dict(model=[cnb.TFIDFMultinomialNB()],
-                        model__tfidf_max_features=dists.randint(1, 1000),
-                        ),
-                   dict(model=[cnb.TFIDFLogisticRegression()],
-                        model__tfidf_max_features=dists.randint(0, 1000),
-                        model__penalty=['l1', 'l2', 'elasticnet', 'none'],
-                        model__tol=dists.uniform(0, 0.00015),
-                        model__C=dists.uniform(0, 0.06),
-                        model__fit_intercept=[True, False],
-                        model__solver=['saga'],
-                        model__max_iter=dists.randint(0, 120),
-                        model__l1_ratio=dists.uniform(0, 0.18)
-                        )]
-
-    apply_random_search(pip, params_grid, X_train, Y_train, "third_screening_results")
 
 
 def main():
@@ -302,8 +281,8 @@ def main():
     # df = resize(df, 50000, "sentiment", 4)
     df = preprocess.df_pre_process(df, "text", "sentiment")
     # first_screening(df)
-    # second_screening(df)
-    final_screening(df)
+    second_screening(df)
+
 
 
 if __name__ == "__main__":
