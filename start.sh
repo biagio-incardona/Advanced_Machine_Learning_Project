@@ -36,7 +36,7 @@ echo "starting ZooKeeper"
 
 #docker container rm kafkaZK >/dev/null
 
-docker run -e KAFKA_ACTION=start-zk --network tap --ip 10.0.100.22  -p 2181:2181 --name kafkaZK tap2:kafka >/dev/null &
+docker run -e KAFKA_ACTION=start-zk --network advm --ip 10.0.100.22  -p 2181:2181 --name kafkaZK advm:kafka >/dev/null &
 
 echo "starting Kafka Server"
 
@@ -44,7 +44,7 @@ echo "starting Kafka Server"
 
 #docker container rm kafkaServer >/dev/null
 
-docker run -e KAFKA_ACTION=start-kafka --network tap --ip 10.0.100.23  -p 9092:9092 --name kafkaServer tap2:kafka >/dev/null &
+docker run -e KAFKA_ACTION=start-kafka --network advm --ip 10.0.100.23  -p 9092:9092 --name kafkaServer advm:kafka >/dev/null &
 
 echo "starting LogStash"
 
@@ -52,7 +52,7 @@ echo "starting LogStash"
 
 #docker container rm LogStash >/dev/null
 
-docker run --network tap --ip 10.0.100.11 --name LogStash tap2:logs >/dev/null &
+docker run --network advm --ip 10.0.100.11 --name LogStash advm:logs >/dev/null &
 
 echo "starting Python"
 
@@ -60,7 +60,7 @@ echo "starting Python"
 
 #docker container rm Python >/dev/null
 
-docker run --network tap --ip 10.0.100.10 --name Python -e CHANNEL_TW=$tc -e CHANNEL_YT=$yc tap2:python >/dev/null &
+docker run --network advm --ip 10.0.100.10 --name Python -e CHANNEL_TW=$tc -e CHANNEL_YT=$yc advm:python >/dev/null &
 
 echo "starting ElasticSearch"
 
@@ -68,7 +68,7 @@ echo "starting ElasticSearch"
 
 #docker container rm ElasticSearch >/dev/null
 
-docker run -t  -p 9200:9200 -p 9300:9300 --ip 10.0.100.51 --name ElasticSearch --network tap -e "discovery.type=single-node"  tap2:es >/dev/null &
+docker run -t  -p 9200:9200 -p 9300:9300 --ip 10.0.100.51 --name ElasticSearch --network advm -e "discovery.type=single-node"  advm:es >/dev/null &
 
 echo "starting kibana"
 
@@ -76,7 +76,7 @@ echo "starting kibana"
 
 #docker container rm Kibana >/dev/null
 
-docker run -p 5601:5601 --ip 10.0.100.52 --name Kibana --network tap tap2:kibana >/dev/null &
+docker run -p 5601:5601 --ip 10.0.100.52 --name Kibana --network advm advm:kibana >/dev/null &
 
 echo "wait a bit for starting spark"
 
