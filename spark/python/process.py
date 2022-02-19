@@ -175,7 +175,10 @@ es_write_conf = {
     "es.nodes" : elastic_host,
     "es.port" : elastic_port,
     "es.resource" : '%s/%s' % (elastic_index,elastic_document),
-    "es.input.json" : elastic_is_json
+    "es.input.json" : elastic_is_json,
+ #   "mapred.reduce.tasks.speculative.execution": "false", #test
+ #   "mapred.map.tasks.speculative.execution": "false", #test
+
 }
 
 elastic = Elasticsearch(hosts=[elastic_host])
