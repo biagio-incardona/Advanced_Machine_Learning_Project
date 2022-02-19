@@ -88,14 +88,11 @@ while ! nc -z 10.0.100.52 5601; do
   sleep 1
 done
 
-echo "Kibana launched"
 sleep 15
-
-xdg-open http://localhost:5601/
+echo "Kibana launched"
+xdg-open http://localhost:5601/ &
 
 sleep 10
-
 echo "starting Spark"
-
-spark/sparkSubmitPython.sh process.py "org.apache.spark:spark-streaming-kafka-0-8_2.11:2.4.5,org.elasticsearch:elasticsearch-hadoop:7.7.0" >/dev/null &
+docker run -e SPARK_ACTION=spark-submit-python -p 4040:4040 -it --network advm --name sparkSubmit advm:spark process.py "org.apache.spark:spark-streaming-kafka-0-8_2.11:2.4.5,org.elasticsearch:elasticsearch-hadoop:7.7.0"
 
