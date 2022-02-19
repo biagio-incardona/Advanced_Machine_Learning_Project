@@ -10,6 +10,7 @@ class STClustering:
         self._r = r
         self._lambda = lambda_
         self._gap_time = gap_time
+        self._cur_time = -1
         self._MC = [[{'bella': 2, 'francescano':1, 'de zio': 2, 'bella de': 2, 'zio': 2, 'de': 2, 'fratelli bella': 1, 'zio fratelli': 2, 'fratelli': 2},1,1]]
 
     def _tokenize(self, text):
@@ -104,6 +105,8 @@ class STClustering:
         return tfidf_vector
 
     def _cosineSimilarity(self, MCi, c):
+        if MCi is None:
+            return 0
         message_tfidf = self._tf_idf_vector(c)
         mc_tfidf = self._tf_idf_vector(MCi)
         return 1 - distance.cosine(mc_tfidf, message_tfidf)
@@ -117,7 +120,8 @@ class STClustering:
     def _get_cosine_similarities(self, ngrams):
         similarities = [0 for i in range(len(self._MC))]
         for i in range(len(self._MC)):
-            similarities[i] = self._cosineSimilarity(self._MC[i][0], ngrams)
+            if self._MC[i] is not None and ngrams is not None:
+                similarities[i] = self._cosineSimilarity(self._MC[i][0], ngrams)
         return similarities
 
     def _update_weights(self, cur_time):
@@ -128,8 +132,35 @@ class STClustering:
             cluster[1] = cluster[1]*decay
             cluster[2] = cur_time
 
-    def _cleanup(self):
+    def _remove_cluster(self, cluster):
+        print("to implement: _remove_cluster")
         pass
+
+    def _remove_ngram(self, ngram, cluster):
+        print("to implement: _remove_ngram")
+        pass
+
+    def _cleanup(self, time):
+        for cluster in self._MC:
+            decay = 2 ** (-1 * self._lambda * (time - cluster[2]))
+            cluster[1] = cluster[1] * decay
+            if cluster[1] <= 2 ** (-1 * self._lambda * self._gap_time):
+                self._remove_cluster(cluster)
+            else:
+                for ngram in cluster[0]:
+                    cluster[0][ngram] = cluster[0][ngram] * decay
+                    if cluster[0][ngram] <= 2 ** (-1 * self._lambda * self._gap_time):
+                        self._remove_ngram(ngram, cluster)
+
+        for i in range(len(self._MC)):
+            similarities = self._get_cosine_similarities(self._MC[i][0])
+            similarities[i] = 0
+            d = similarities.index(max(similarities))
+            if similarities[d] >= 0.5:#self._r:
+                self._merge(self._MC[i], self._MC[d])
+                self._MC[i] = None
+
+
 
     def insert(self, message, time):
         ngrams = self._ngram_tokenizer(message)
@@ -141,18 +172,14 @@ class STClustering:
         else:
             self._MC.append(c)
         self._update_weights(time)
-        if time - self._gap_time == 0:
+        if self._cur_time < 0:
+            self._cur_time = time
+        elif time - self._cur_time >= self._gap_time:
             print("gap")
-            self._cleanup()
-        print(len(self._MC))
-        print(similarities)
+            self._cleanup(time)
 
 p =STClustering(ngram_range=(1,2))
-p.insert("che persona del cavolo ma dai e che cazzo", 1.3)
-p.insert("sei una schifo allora gne gne gne fascistissimo", 1.5)
-p.insert("che persona del cavolo ma dai e che cazzo", 1.7)
-p.insert("sei una schifo allora gne gne gne fascistissimo", 1.9)
-p.insert("che persona del cavolo ma dai e che cazzo", 2.1)
-p.insert("sei una schifo allora gne gne gne fascistissimo", 2.3)
-p.insert("casiejw auasdj ldjiwqe cazzo", 2.5)
-p.insert("sei una schifo allora gne gne gne fascistissimo", 2.9)
+p.insert("hello boy", 1)
+p.insert("ciao frate", 1.2)
+p.insert("bella de zio", 1.8)
+p.insert("bello di casa", 2.2)
