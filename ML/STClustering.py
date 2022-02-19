@@ -4,11 +4,12 @@ from scipy.spatial import distance
 from nltk.util import ngrams
 
 class STClustering:
-    def __init__(self, ngram_range=(1,1), max_features = 1000):
+    def __init__(self, ngram_range=(1,1), max_features = 1000, r=1, lambda_=0.01):
         self._ngram_range = ngram_range
         self._max_features = max_features
-        self._vectorizer = TfidfVectorizer(ngram_range=self.ngram_range, max_features=self.max_features)
-        self._MC = [[{'bella': 2, 'de zio': 2, 'bella de': 2, 'zio': 2, 'de': 2, 'fratelli bella': 1, 'zio fratelli': 2, 'fratelli': 2},1,1]]
+        self._r = r
+        self._lambda = lambda_
+        self._MC = [[{'bella': 2, 'francescano':1, 'de zio': 2, 'bella de': 2, 'zio': 2, 'de': 2, 'fratelli bella': 1, 'zio fratelli': 2, 'fratelli': 2},1,1]]
 
     def _tokenize(self, text):
         """"Turn text into a sequence of tokens"""
@@ -55,21 +56,38 @@ class STClustering:
             occurrences[key] = ngrams.count(key)
         return occurrences
 
+    def _fix_MC(self, ngrams):
+        for key in ngrams:
+            if key not in self._MC[0][0]:
+                for ngram in self._MC:
+                    ngram[0][key] = 0
+
+    def _fix_current(self, ngrams):
+        all_ngrams = set(self._MC[0][0].keys())
+        ngrams = ngrams.union(all_ngrams)
+        return ngrams
+
+    def _ngram_adjust(self, ngrams):
+        self._fix_MC(ngrams)
+        ngrams = self._fix_current(ngrams)
+        return ngrams
+
     def _ngram_tokenizer(self, text):
         ngrams = self._generate_ngrams(text)
         unique_ngrams = set(ngrams)
+        unique_ngrams = self._ngram_adjust(unique_ngrams)
         occurrences = self._count_occurrences(ngrams, unique_ngrams)
         return occurrences
 
     def _tf_vector(self, document):
-        tf = document
+        tf = document.copy()
         total = sum(document.values())
         for key in document.keys():
             tf[key] = tf[key]/total
         return tf
 
     def _idf_vector(self, document):
-        idf = document
+        idf = document.copy()
         n_docs = 1 + len(self._MC)
         for key in document.keys():
             n_valid_docs = 1 + len([1 for doc in self._MC if key in doc])
@@ -78,25 +96,35 @@ class STClustering:
         return idf
 
     def _tf_idf_vector(self, c):
-        tf_vector = self._tf_vector(c)
+        tf_vector = c.copy()
         idf_vector = self._idf_vector(c)
         tfidf_vector = [tf_vector[ngram]*idf_vector[ngram] for ngram in c.keys()]
+
         return tfidf_vector
 
     def _cosineSimilarity(self, MCi, c):
         message_tfidf = self._tf_idf_vector(c)
         mc_tfidf = self._tf_idf_vector(MCi)
-        print(message_tfidf)
-        print(mc_tfidf)
         return 1 - distance.cosine(mc_tfidf, message_tfidf)
+
+    def _merge(self, micro_cluster, macro_cluster):
+        decay = 2**(-1*self._lambda*(micro_cluster[2]-macro_cluster[2]))
+        for key in micro_cluster[0].keys():
+            macro_cluster[0][key] += micro_cluster[0][key]
+        macro_cluster[1] = macro_cluster[1]*decay
+        macro_cluster[2] = micro_cluster[2]
 
     def insert(self, message, time):
         ngrams = self._ngram_tokenizer(message)
-        c = [ngrams, time, 1]
+        c = [ngrams, 1, time]
         similarities = [0 for i in range(len(self._MC))]
-        self._tf_idf_vector(ngrams)
         for i in range(len(self._MC)):
             similarities[i] = self._cosineSimilarity(self._MC[i][0], ngrams)
-
+        d = similarities.index(min(similarities))
+        if similarities[d] <= self._r:
+            self._MC[d] = self._merge(c, self._MC[d])
+        else:
+            self._MC.append(c)
+        print(similarities)
 p = STClustering(ngram_range=(1,2))
-print(p.insert("bella de zio, fratelli", 1))
+print(p.insert("bella", 1))
