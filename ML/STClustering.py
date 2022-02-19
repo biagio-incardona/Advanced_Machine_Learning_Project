@@ -3,15 +3,17 @@ import math
 from scipy.spatial import distance
 from nltk.util import ngrams
 
+
 class STClustering:
-    def __init__(self, ngram_range=(1,1), max_features = 1000, r=0.9, lambda_=0.01, gap_time=1):
+    def __init__(self, ngram_range=(1, 1), max_features=1000, r=0.9, lambda_=0.01, gap_time=1):
         self._ngram_range = ngram_range
         self._max_features = max_features
         self._r = r
         self._lambda = lambda_
         self._gap_time = gap_time
         self._cur_time = -1
-        self._MC = [[{'bella': 2, 'francescano':1, 'de zio': 2, 'bella de': 2, 'zio': 2, 'de': 2, 'fratelli bella': 1, 'zio fratelli': 2, 'fratelli': 2},1,1]]
+        self._MC = []#[[{'bella': 2, 'francescano': 1, 'de zio': 2, 'bella de': 2, 'zio': 2, 'de': 2, 'fratelli bella': 1,
+                   #   'zio fratelli': 2, 'fratelli': 2}, 1, 1]]
 
     def _tokenize(self, text):
         """"Turn text into a sequence of tokens"""
@@ -70,8 +72,9 @@ class STClustering:
         return ngrams
 
     def _ngram_adjust(self, ngrams):
-        self._fix_MC(ngrams)
-        ngrams = self._fix_current(ngrams)
+        if len(self._MC) > 0:
+            self._fix_MC(ngrams)
+            ngrams = self._fix_current(ngrams)
         return ngrams
 
     def _ngram_tokenizer(self, text):
@@ -85,14 +88,14 @@ class STClustering:
         tf = document.copy()
         total = sum(document.values())
         for key in document.keys():
-            tf[key] = tf[key]/total
+            tf[key] = tf[key] / total
         return tf
 
     def _idf_vector(self, document):
         idf = document.copy()
-        n_docs = 1 + len(self._MC)
+        n_docs = 1 + len([x for x in self._MC if x is not None])
         for key in document.keys():
-            n_valid_docs = 1 + len([1 for doc in self._MC if key in doc])
+            n_valid_docs = 1 + len([1 for doc in self._MC if doc is not None and key in doc])
             ratio = n_valid_docs / n_docs
             idf[key] = math.log(ratio, 2)
         return idf
@@ -100,7 +103,7 @@ class STClustering:
     def _tf_idf_vector(self, c):
         tf_vector = c.copy()
         idf_vector = self._idf_vector(c)
-        tfidf_vector = [tf_vector[ngram]*idf_vector[ngram] for ngram in c.keys()]
+        tfidf_vector = [tf_vector[ngram] * idf_vector[ngram] for ngram in c.keys()]
 
         return tfidf_vector
 
@@ -128,17 +131,25 @@ class STClustering:
         for cluster in self._MC:
             decay = 2 ** (-1 * self._lambda * (cur_time - cluster[2]))
             for key in cluster[0].keys():
-                cluster[0][key] = cluster[0][key]*decay
-            cluster[1] = cluster[1]*decay
+                cluster[0][key] = cluster[0][key] * decay
+            cluster[1] = cluster[1] * decay
             cluster[2] = cur_time
 
     def _remove_cluster(self, cluster):
         print("to implement: _remove_cluster")
         pass
+    def _clean_old_ngram(self, ngram):
+        occurrencies = 0
+        for cluster in self._MC:
+            occurrencies += cluster[0][ngram]
+        if occurrencies == 0:
+            for cluster in self._MC:
+                cluster[0].pop(ngram)
 
     def _remove_ngram(self, ngram, cluster):
-        print("to implement: _remove_ngram")
-        pass
+        cluster[0][ngram] = 0
+        self._clean_old_ngram(ngram)
+
 
     def _cleanup(self, time):
         for cluster in self._MC:
@@ -149,24 +160,27 @@ class STClustering:
             else:
                 for ngram in cluster[0]:
                     cluster[0][ngram] = cluster[0][ngram] * decay
-                    if cluster[0][ngram] <= 2 ** (-1 * self._lambda * self._gap_time):
+                    if True: #cluster[0][ngram] <= 2 ** (-1 * self._lambda * self._gap_time):
                         self._remove_ngram(ngram, cluster)
-
+        print(self._MC)
         for i in range(len(self._MC)):
             similarities = self._get_cosine_similarities(self._MC[i][0])
             similarities[i] = 0
             d = similarities.index(max(similarities))
-            if similarities[d] >= 0.5:#self._r:
+            if similarities[d] >= self._r:
                 self._merge(self._MC[i], self._MC[d])
                 self._MC[i] = None
-
-
+        self._MC = [micro for micro in self._MC if micro is not None]
 
     def insert(self, message, time):
         ngrams = self._ngram_tokenizer(message)
         c = [ngrams, 1, time]
         similarities = self._get_cosine_similarities(ngrams)
-        d = similarities.index(max(similarities))
+        if len(similarities) > 0:
+            d = similarities.index(max(similarities))
+        else:
+            similarities.append(0)
+            d = 0
         if similarities[d] >= self._r:
             self._merge(c, self._MC[d])
         else:
@@ -178,8 +192,9 @@ class STClustering:
             print("gap")
             self._cleanup(time)
 
-p =STClustering(ngram_range=(1,2))
+
+p = STClustering(ngram_range=(1, 2))
 p.insert("hello boy", 1)
-p.insert("ciao frate", 1.2)
-p.insert("bella de zio", 1.8)
+#p.insert("ciao frate", 1.2)
+#p.insert("bella de zio", 1.8)
 p.insert("bello di casa", 2.2)
