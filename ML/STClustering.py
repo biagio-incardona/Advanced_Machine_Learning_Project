@@ -1,19 +1,20 @@
 import re
 import math
+import pandas as pd
 from scipy.spatial import distance
 from nltk.util import ngrams
 
 
 class STClustering:
-    def __init__(self, ngram_range=(1, 1), max_features=1000, r=0.9, lambda_=0.01, gap_time=1):
+    def __init__(self, ngram_range=(1, 1), r=0.9, lambda_=0.01, gap_time=1):
         self._ngram_range = ngram_range
-        self._max_features = max_features
         self._r = r
         self._lambda = lambda_
         self._gap_time = gap_time
         self._cur_time = -1
-        self._MC = []#[[{'bella': 2, 'francescano': 1, 'de zio': 2, 'bella de': 2, 'zio': 2, 'de': 2, 'fratelli bella': 1,
-                   #   'zio fratelli': 2, 'fratelli': 2}, 1, 1]]
+        self._old_ngrams = []
+        self._old_clusters = []
+        self._MC = []
 
     def _tokenize(self, text):
         """"Turn text into a sequence of tokens"""
@@ -107,7 +108,7 @@ class STClustering:
 
         return tfidf_vector
 
-    def _cosineSimilarity(self, MCi, c):
+    def _cosine_similarity(self, MCi, c):
         if MCi is None:
             return 0
         message_tfidf = self._tf_idf_vector(c)
@@ -124,7 +125,7 @@ class STClustering:
         similarities = [0 for i in range(len(self._MC))]
         for i in range(len(self._MC)):
             if self._MC[i] is not None and ngrams is not None:
-                similarities[i] = self._cosineSimilarity(self._MC[i][0], ngrams)
+                similarities[i] = self._cosine_similarity(self._MC[i][0], ngrams)
         return similarities
 
     def _update_weights(self, cur_time):
@@ -135,34 +136,54 @@ class STClustering:
             cluster[1] = cluster[1] * decay
             cluster[2] = cur_time
 
-    def _remove_cluster(self, cluster):
-        print("to implement: _remove_cluster")
-        pass
-    def _clean_old_ngram(self, ngram):
-        occurrencies = 0
+    def _annotate_old_cluster(self, cluster):
+        self._old_clusters.append(cluster)
+        for ngram in cluster[0]:
+            self._annotate_old_ngram(ngram, cluster)
+
+    def _annotate_ngram(self, ngram):
+        occurrences = 0
         for cluster in self._MC:
-            occurrencies += cluster[0][ngram]
-        if occurrencies == 0:
-            for cluster in self._MC:
-                cluster[0].pop(ngram)
+            occurrences += cluster[0][ngram]
+        if occurrences == 0:
+            self._old_ngrams.append(ngram)
 
-    def _remove_ngram(self, ngram, cluster):
+    def _annotate_old_ngram(self, ngram, cluster):
         cluster[0][ngram] = 0
-        self._clean_old_ngram(ngram)
+        self._annotate_ngram(ngram)
 
+    def _clean_old_ngrams(self):
+        for cluster in self._MC:
+            for ngram in self._old_ngrams:
+                if ngram in cluster[0]:
+                    cluster[0].pop(ngram)
+        self._old_ngrams = []
+
+    def _check_empty_clusters(self):
+        for cluster in self._MC:
+            if not bool(cluster[0]):
+                self._annotate_old_cluster(cluster)
+
+    def _clean_old_clusters(self):
+        self._check_empty_clusters()
+        for cluster in self._old_clusters:
+            if cluster in self._MC:
+                self._MC.remove(cluster)
+        self._old_clusters = []
 
     def _cleanup(self, time):
         for cluster in self._MC:
             decay = 2 ** (-1 * self._lambda * (time - cluster[2]))
             cluster[1] = cluster[1] * decay
             if cluster[1] <= 2 ** (-1 * self._lambda * self._gap_time):
-                self._remove_cluster(cluster)
+                self._annotate_old_cluster(cluster)
             else:
                 for ngram in cluster[0]:
                     cluster[0][ngram] = cluster[0][ngram] * decay
-                    if True: #cluster[0][ngram] <= 2 ** (-1 * self._lambda * self._gap_time):
-                        self._remove_ngram(ngram, cluster)
-        print(self._MC)
+                    if cluster[0][ngram] <= 2 ** (-1 * self._lambda * self._gap_time):
+                        self._annotate_old_ngram(ngram, cluster)
+        self._clean_old_clusters()
+        self._clean_old_ngrams()
         for i in range(len(self._MC)):
             similarities = self._get_cosine_similarities(self._MC[i][0])
             similarities[i] = 0
@@ -171,6 +192,7 @@ class STClustering:
                 self._merge(self._MC[i], self._MC[d])
                 self._MC[i] = None
         self._MC = [micro for micro in self._MC if micro is not None]
+        self._clean_old_clusters()
 
     def insert(self, message, time):
         ngrams = self._ngram_tokenizer(message)
@@ -189,12 +211,22 @@ class STClustering:
         if self._cur_time < 0:
             self._cur_time = time
         elif time - self._cur_time >= self._gap_time:
-            print("gap")
             self._cleanup(time)
 
+    def show_clusters(self):
+        print(self.get_clusters())
 
-p = STClustering(ngram_range=(1, 2))
-p.insert("hello boy", 1)
-#p.insert("ciao frate", 1.2)
-#p.insert("bella de zio", 1.8)
-p.insert("bello di casa", 2.2)
+    def get_clusters(self):
+        clusters = []
+        for cluster in self._MC:
+            max_value = max(cluster[0], key=cluster[0].get)
+            weight = cluster[1]
+            clusters.append({"cluster": max_value, "weight": weight})
+        return pd.DataFrame(clusters).groupby("cluster")['weight'].max().reset_index()
+
+
+p = STClustering(ngram_range=(1, 1), r=0.8, lambda_=0.1, gap_time=2)
+p.insert("hey how are you?", 1)
+p.insert("dude i am so bored!", 2)
+p.insert("but in this case it shouldn't be like that", 1.8)
+p.show_clusters()
