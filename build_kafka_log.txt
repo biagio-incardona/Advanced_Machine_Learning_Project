@@ -2,57 +2,34 @@ Sending build context to Docker daemon   86.5MB
 Step 1/11 : FROM openjdk:8-jre-alpine
  ---> f7a292bbb70c
 Step 2/11 : LABEL maintainer="Biagio Incardona"
- ---> Running in b0d350a95177
-Removing intermediate container b0d350a95177
+ ---> Using cache
  ---> 8d1cacfd0049
 Step 3/11 : ENV PATH /opt/kafka/bin:$PATH
- ---> Running in d9274ec45b23
-Removing intermediate container d9274ec45b23
+ ---> Using cache
  ---> a47b71cc28a7
 Step 4/11 : ENV KAFKA_DIR "/opt/kafka"
- ---> Running in 0a3363bbf183
-Removing intermediate container 0a3363bbf183
+ ---> Using cache
  ---> 8d090926cdb9
 Step 5/11 : ARG KAFKA_VERSION="2.12-3.0.0"
- ---> Running in c03eda51bb1a
-Removing intermediate container c03eda51bb1a
+ ---> Using cache
  ---> 03f8ce012c81
 Step 6/11 : RUN apk update && apk add --no-cache bash gcompat
- ---> Running in 0eda094b32b2
-fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/x86_64/APKINDEX.tar.gz
-fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/x86_64/APKINDEX.tar.gz
-v3.9.6-143-ga5f34edab6 [http://dl-cdn.alpinelinux.org/alpine/v3.9/main]
-v3.9.6-138-ge069a77b3b [http://dl-cdn.alpinelinux.org/alpine/v3.9/community]
-OK: 9792 distinct packages available
-fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/x86_64/APKINDEX.tar.gz
-fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/x86_64/APKINDEX.tar.gz
-(1/9) Upgrading musl (1.1.20-r4 -> 1.1.20-r6)
-(2/9) Installing ncurses-terminfo-base (6.1_p20190105-r0)
-(3/9) Installing ncurses-terminfo (6.1_p20190105-r0)
-(4/9) Installing ncurses-libs (6.1_p20190105-r0)
-(5/9) Installing readline (7.0.003-r1)
-(6/9) Installing bash (4.4.19-r1)
-Executing bash-4.4.19-r1.post-install
-(7/9) Installing libc6-compat (1.1.20-r6)
-(8/9) Installing gcompat (0.3.0-r0)
-(9/9) Upgrading musl-utils (1.1.20-r4 -> 1.1.20-r6)
-Executing busybox-1.29.3-r10.trigger
-OK: 93 MiB in 60 packages
-Removing intermediate container 0eda094b32b2
+ ---> Using cache
  ---> f032aa965506
 Step 7/11 : ADD setup/kafka_${KAFKA_VERSION}.tgz /opt
+ ---> Using cache
  ---> f791f5de0ed6
 Step 8/11 : RUN ln -s /opt/kafka_${KAFKA_VERSION} ${KAFKA_DIR}
- ---> Running in 4b746b7dab22
-Removing intermediate container 4b746b7dab22
+ ---> Using cache
  ---> 6dfe7acf2f79
 Step 9/11 : ADD kafka-manager.sh ${KAFKA_DIR}/bin/kafka-manager
+ ---> Using cache
  ---> b1b0bdd67aec
 Step 10/11 : ADD conf/* ${KAFKA_DIR}/config/
+ ---> Using cache
  ---> d3fcf5663d49
 Step 11/11 : ENTRYPOINT [ "kafka-manager" ]
- ---> Running in e1d0d1cb2fc8
-Removing intermediate container e1d0d1cb2fc8
+ ---> Using cache
  ---> d7ffacf97892
 Successfully built d7ffacf97892
 Successfully tagged advm:kafka

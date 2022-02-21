@@ -1,62 +1,10 @@
 Sending build context to Docker daemon  4.096kB
 Step 1/3 : FROM  docker.elastic.co/kibana/kibana:7.7.0
-7.7.0: Pulling from kibana/kibana
-86dbb57a3083: Already exists
-428bffc1ae7f: Pulling fs layer
-d06182cbcb81: Pulling fs layer
-6288415a3c6b: Pulling fs layer
-6ca68992403a: Pulling fs layer
-71ae5cf0fadc: Pulling fs layer
-33a4ecc46c55: Pulling fs layer
-409e3523715e: Pulling fs layer
-9b9517adf619: Pulling fs layer
-3a4244116da1: Pulling fs layer
-0ce0ac546744: Pulling fs layer
-6ca68992403a: Waiting
-71ae5cf0fadc: Waiting
-33a4ecc46c55: Waiting
-409e3523715e: Waiting
-9b9517adf619: Waiting
-3a4244116da1: Waiting
-0ce0ac546744: Waiting
-6288415a3c6b: Verifying Checksum
-6288415a3c6b: Download complete
-d06182cbcb81: Verifying Checksum
-d06182cbcb81: Download complete
-71ae5cf0fadc: Verifying Checksum
-71ae5cf0fadc: Download complete
-33a4ecc46c55: Verifying Checksum
-33a4ecc46c55: Download complete
-409e3523715e: Verifying Checksum
-409e3523715e: Download complete
-428bffc1ae7f: Verifying Checksum
-428bffc1ae7f: Download complete
-428bffc1ae7f: Pull complete
-d06182cbcb81: Pull complete
-6288415a3c6b: Pull complete
-9b9517adf619: Verifying Checksum
-9b9517adf619: Download complete
-0ce0ac546744: Verifying Checksum
-0ce0ac546744: Download complete
-3a4244116da1: Verifying Checksum
-3a4244116da1: Download complete
-6ca68992403a: Verifying Checksum
-6ca68992403a: Download complete
-6ca68992403a: Pull complete
-71ae5cf0fadc: Pull complete
-33a4ecc46c55: Pull complete
-409e3523715e: Pull complete
-9b9517adf619: Pull complete
-3a4244116da1: Pull complete
-0ce0ac546744: Pull complete
-Digest: sha256:1682e44eb728e1de2027c2cc8787d206388d9f73391928bdbfbbd24d758dd927
-Status: Downloaded newer image for docker.elastic.co/kibana/kibana:7.7.0
  ---> eadc7b3d59dd
 Step 2/3 : MAINTAINER Biagio Incardona
- ---> Running in fd8bcd581b95
-Removing intermediate container fd8bcd581b95
+ ---> Using cache
  ---> f4622a08be5e
 Step 3/3 : ADD kibana.yml /usr/share/kibana/config
- ---> 948efbde9f55
-Successfully built 948efbde9f55
+ ---> ea97d33b5eab
+Successfully built ea97d33b5eab
 Successfully tagged advm:kibana
