@@ -181,7 +181,13 @@ es_write_conf = {
 
 }
 
-elastic = Elasticsearch(hosts=[elastic_host])
+host = {
+	'host' : elastic_host,
+	'port' : elastic_port
+}
+
+#elastic = Elasticsearch(hosts=[host,])#elastic_host])
+elastic = Elasticsearch(hosts=[host,],node_class="requests")
 
 response = elastic.indices.create(
     index=elastic_index,
