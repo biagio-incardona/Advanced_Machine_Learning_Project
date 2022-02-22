@@ -99,7 +99,9 @@ model = TFIDF_Models.TFIDFLogisticRegression(
 #with open('TFIDF_logisticRegression.pkl', 'wb') as fid:
 #    pickle.dump(model, fid)
 
-with open('TFIDF_logisticRegression.pkl', 'rb') as fid:
+with open('C:/Users/biagi/Desktop/TFIDF_logisticRegression.pkl', 'rb') as fid:
     model = pickle.load(fid)
 
 ms.model_evaluate(model, X_test, Y_test)
+
+print(model.predict_proba(X_test))
