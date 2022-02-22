@@ -1,19 +1,12 @@
 from settings import BASE_DIR
 from nltk.stem import SnowballStemmer
 import Preprocess as ps
-from gensim.parsing.preprocessing import remove_stopwords
-import string
+from model_selection import load_dataset, resize
+import myTFIDF as mtfidf
 from sklearn.feature_extraction.text import TfidfVectorizer
-from model_selection import load_dataset
 
 
 class Kmeanclustering:
-
-    def tfvec(df, text):
-        vectorizer_ntf = TfidfVectorizer(analyzer='word', ngram_range=(1, 2))
-        X_ntf = vectorizer_ntf.fit_transform(text)
-        return X_ntf
-
     def main(self=None):
         path = "{BaseDir}/Advanced_Machine_Learning_Project/data/dataset.csv".format(BaseDir=BASE_DIR)
         columns = ["sentiment", "ids", "date", "flag", "user", "text"]
@@ -47,17 +40,13 @@ class Kmeanclustering:
         sbStem = SnowballStemmer("english", True)
         preprocess = ps.Preprocess(negations, emojis, regex_subs, sbStem)
         df = load_dataset(path, columns, final_columns)
-        df = df[:500]
+        df = resize(df, 50000, "sentiment", 4)
         df = preprocess.df_pre_process(df, "text", "sentiment")
         df = df['text']
-        text = [remove_stopwords(x).translate(
-            str.maketrans('', '', string.punctuation)
-        ).translate(str.maketrans('', '', string.digits)) for x in df]
-        ntf = Kmeanclustering.tfvec(df, text)
+        ntf = mtfidf.myTFIDF(df)
+        X = ntf.df_tfidf_vectorize(df)
 
-        return ntf, df
+        return X, df
 
 
-ntf, df = Kmeanclustering.main()
-
-
+Kmeanclustering.main()
