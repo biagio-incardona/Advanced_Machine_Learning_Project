@@ -28,7 +28,17 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import spacy
 from collections import Counter
 from string import punctuation
+import TFIDF_Models as models
+import nltk
+from nltk.stem import SnowballStemmer
+import Preprocess as ps
+import pickle
 
+nltk.download('stopwords')
+model = None
+with open('/opt/advm/TFIDF_logisticRegression.pkl', 'rb') as file:
+    model = pickle.load(file)
+    
 sid = SentimentIntensityAnalyzer()
 
 
@@ -47,9 +57,11 @@ get_twitch_schema = tp.StructType([
 ])
 
 def get_sentiment(text):
-    value = sid.polarity_scores(text)
+    #value = sid.polarity_scores(text)
+    value = model.predict_proba([text])
+    #value = value['compound']
+    value = value[0][1]
     print(value)
-    value = value['compound']
     return value
 
 
@@ -101,6 +113,7 @@ def process(key, rdd):
     print(mex)
     mex2 = mex
     mex = mex.encode("ascii", "ignore")
+    mex2 = preprocessor.text_preprocess(mex2)
     sentiment = get_sentiment(mex2)
     keyword = get_keyword(mex2)
     if keyword is None:
@@ -139,6 +152,32 @@ def process(key, rdd):
     )
     
     
+negations = {"isn't": "is not", "aren't": "are not", "wasn't": "was not", "weren't": "were not",
+                 "haven't": "have not", "hasn't": "has not", "hadn't": "had not", "won't": "will not",
+                 "wouldn't": "would not", "don't": "do not", "doesn't": "does not", "didn't": "did not",
+                 "can't": "can not", "couldn't": "could not", "shouldn't": "should not", "mightn't": "might not",
+                 "mustn't": "must not"}
+
+    # convert twitter emojis in twitch style emojis
+emojis = {':)': 'smile', ':-)': 'smile', ';d': 'wink', ':-E': 'vampire', ':(': 'sad',
+              ':-(': 'sad', ':-<': 'sad', ':P': 'raspberry', ':O': 'surprised',
+              ':-@': 'shocked', ':@': 'shocked', ':-$': 'confused',
+              ':#': 'mute', ':X': 'mute', ':^)': 'smile', ':-&': 'confused', '$_$': 'greedy',
+              '@@': 'eyeroll', ':-!': 'confused', ':-D': 'smile', ':-0': 'yell', 'O.o': 'confused',
+              '<(-_-)>': 'robot', 'd[-_-]b': 'dj', ":'-)": 'sadsmile', ';)': 'wink',
+              ';-)': 'wink', 'O:-)': 'angel', 'O*-)': 'angel', '(:-D': 'gossip', '=^.^=': 'cat'}
+
+regex_subs = {
+        r"https?://[^s]+": "URL",  # replace any url with URL
+        "www.[^ ]+": "URL",  # replace any url with URL
+        r"@[^\s]+": "USR",  # replace any user tag with USR (the tag system is the same also in twitch)
+        r"(.)\1\1+": r"\1\1",  # replace 3 consecutive chars with 2
+        r"[\s]+": " ",  # remove consec spaces
+        "#[a-z0-9]*": ""  # remove hashtags, they are not used in twitch chats
+    }
+
+sbStem = SnowballStemmer("english", True)
+preprocessor = ps.Preprocess(negations, emojis, regex_subs, sbStem)
 
 sc = SparkContext(appName="SparkSentimentTopicES")
 spark = SparkSession(sc)

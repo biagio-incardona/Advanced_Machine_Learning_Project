@@ -26,11 +26,14 @@ RUN python3.6 get-pip.py
 RUN python3.6 -m pip install pyspark==3.2.1 elasticsearch==7.7.0 kafka-python==2.0.2 vaderSentiment spaCy
 RUN python3.6 -m pip install numpy==1.19.5
 RUN python3.6 -m spacy download en_core_web_sm
-
+RUN python3.6 -m pip install scikit-learn==0.24.0
+RUN python3.6 -m pip install nltk==3.6.7
 # Create Sym Link 
 RUN ln -s /opt/spark-${SPARK_VERSION}-bin-hadoop2.7 ${SPARK_DIR} 
 
 ADD python/*  /opt/advm/
+
+RUN unzip ./opt/advm/TFIDF_logisticRegression.zip -d ./opt/advm
 
 # Add Spark Manager
 ADD spark-manager.sh $SPARK_DIR/bin/spark-manager

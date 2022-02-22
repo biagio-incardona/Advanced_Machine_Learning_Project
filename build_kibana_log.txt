@@ -5,6 +5,6 @@ Step 2/3 : MAINTAINER Biagio Incardona
  ---> Using cache
  ---> f4622a08be5e
 Step 3/3 : ADD kibana.yml /usr/share/kibana/config
- ---> ea97d33b5eab
-Successfully built ea97d33b5eab
+ ---> 99824a2f9d84
+Successfully built 99824a2f9d84
 Successfully tagged advm:kibana
