@@ -58,7 +58,7 @@ regex_subs = {
 sbStem = SnowballStemmer("english", True)
 preprocess = ps.Preprocess(negations, emojis, regex_subs, sbStem)
 df = ms.load_dataset(path, columns, final_columns)
-#df = ms.resize(df, 500, "sentiment", 4)
+df = ms.resize(df, 500, "sentiment", 4)
 df = preprocess.df_pre_process(df, "text", "sentiment")
 X_train, X_test, Y_train, Y_test = ms.df_train_test_split(df, "text", "sentiment", test_size=0.05)
 model_json = {
@@ -94,7 +94,12 @@ model = TFIDF_Models.TFIDFLogisticRegression(
     l1_ratio=model_json["model__l1_ratio"]
 )
 
-model.fit(X_train, Y_train)
-print(model)
-with open('TFIDF_logisticRegression.pkl', 'wb') as fid:
-    pickle.dump(model, fid)
+#model.fit(X_train, Y_train)
+#print(model)
+#with open('TFIDF_logisticRegression.pkl', 'wb') as fid:
+#    pickle.dump(model, fid)
+
+with open('TFIDF_logisticRegression.pkl', 'rb') as fid:
+    model = pickle.load(fid)
+
+ms.model_evaluate(model, X_test, Y_test)

@@ -177,6 +177,7 @@ class TFIDFLogisticRegression(LogisticRegression):
                          warm_start=warm_start,
                          n_jobs=n_jobs,
                          l1_ratio=l1_ratio)
+        self.tfidf = None
         self.tfidf_max_features = tfidf_max_features
         self.ngram_range = ngram_range
     
@@ -192,3 +193,4 @@ class TFIDFLogisticRegression(LogisticRegression):
     def predict_proba(self, X):
         X = self.tfidf.df_tfidf_vectorize(X)
         return super().predict_proba(X)
+
