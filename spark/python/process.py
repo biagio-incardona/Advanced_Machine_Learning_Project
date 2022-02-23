@@ -48,24 +48,6 @@ def get_sentiment(text):
     print(value)
     return value
 
-
-def get_keyword(text):
-    result = []
-    pos_tag = ['PROPN', 'ADJ', 'NOUN'] # 1
-    doc = nlp(text.lower()) # 2
-    for token in doc:
-        # 3
-        if(token.text in nlp.Defaults.stop_words or token.text in punctuation):
-            continue
-        # 4
-        if(token.pos_ in pos_tag):
-            result.append(token.text)
-
-    back = [x for x in Counter(result).most_common(1)]       
-    if len(back) == 0:
-        return None 
-    return back[0][0]
-
 def process(key, rdd):
     global spark
     print(key)
@@ -91,10 +73,6 @@ def process(key, rdd):
     mex = mex.encode("ascii", "ignore")
     mex2 = preprocessor.text_preprocess(mex2)
     sentiment = get_sentiment(mex2)
-    keyword = get_keyword(mex2)
-    if keyword is None:
-        print("Only emoticons not recognized")
-        return
 
     rowRdd = twitch_chat.map(lambda t:
         Row(
@@ -113,8 +91,7 @@ def process(key, rdd):
             'mex' : x['mex'],
             'engagement' : x['engagement'],
             'source' : x['source'],
-            'mex_sentiment' : sentiment,
-            'keyword' : keyword
+            'mex_sentiment' : sentiment
         }
     )
 

@@ -1,80 +1,65 @@
 Sending build context to Docker daemon  290.2MB
-Step 1/25 : FROM openjdk:8-jre
+Step 1/20 : FROM openjdk:8-jre
  ---> 7b87e4358a6f
-Step 2/25 : ENV PATH $SPARK_DIR/bin:$PATH
+Step 2/20 : ENV PATH $SPARK_DIR/bin:$PATH
  ---> Using cache
  ---> 075863e854d2
-Step 3/25 : ENV SPARK_VERSION=2.4.8
+Step 3/20 : ENV SPARK_VERSION=2.4.8
  ---> Using cache
  ---> e603efeefd51
-Step 4/25 : ENV SPARK_DIR=/opt/spark
+Step 4/20 : ENV SPARK_DIR=/opt/spark
  ---> Using cache
  ---> 62e6cad07b47
-Step 5/25 : ENV PATH $SPARK_DIR/bin:$PATH
+Step 5/20 : ENV PATH $SPARK_DIR/bin:$PATH
  ---> Using cache
  ---> 194889054b6c
-Step 6/25 : ENV PYSPARK_PYTHON=python3.6
+Step 6/20 : ENV PYSPARK_PYTHON=python3.6
  ---> Using cache
  ---> 023ac4a4c48d
-Step 7/25 : ADD setup/spark-${SPARK_VERSION}-bin-hadoop2.7.tgz /opt
+Step 7/20 : ADD setup/spark-${SPARK_VERSION}-bin-hadoop2.7.tgz /opt
  ---> Using cache
  ---> 495de0e719f3
-Step 8/25 : RUN apt-get update && apt-get -y install bash
+Step 8/20 : RUN apt-get update && apt-get -y install bash
  ---> Using cache
  ---> ff6c5c5e8137
-Step 9/25 : RUN apt -y install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev wget libbz2-dev
+Step 9/20 : RUN apt -y install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev wget libbz2-dev
  ---> Using cache
  ---> 16f775de451c
-Step 10/25 : RUN wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz && 	tar xzf Python-3.6.9.tgz && 	cd Python-3.6.9 && 	./configure && 	make altinstall
+Step 10/20 : RUN wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz && 	tar xzf Python-3.6.9.tgz && 	cd Python-3.6.9 && 	./configure && 	make altinstall
  ---> Using cache
  ---> 716c4a2cbe65
-Step 11/25 : RUN python3.6 -V
+Step 11/20 : RUN python3.6 -V
  ---> Using cache
  ---> cda47d6c6395
-Step 12/25 : COPY get-pip.py .
+Step 12/20 : COPY get-pip.py .
  ---> Using cache
  ---> 97a65f035ef6
-Step 13/25 : RUN python3.6 get-pip.py
+Step 13/20 : RUN python3.6 get-pip.py
  ---> Using cache
  ---> 7748b46d45da
-Step 14/25 : RUN python3.6 -m pip install pyspark==3.2.1 elasticsearch==7.7.0 kafka-python==2.0.2 vaderSentiment spaCy
+Step 14/20 : RUN python3.6 -m pip install pyspark==3.2.1 elasticsearch==7.7.0 kafka-python==2.0.2 numpy==1.19.5 scikit-learn==0.24.0 nltk==3.6.7 pandas==1.1.5
  ---> Using cache
- ---> 968a335063e7
-Step 15/25 : RUN python3.6 -m pip install numpy==1.19.5
+ ---> 9649cbb5ba85
+Step 15/20 : RUN ln -s /opt/spark-${SPARK_VERSION}-bin-hadoop2.7 ${SPARK_DIR}
  ---> Using cache
- ---> bba39c500830
-Step 16/25 : RUN python3.6 -m spacy download en_core_web_sm
- ---> Using cache
- ---> 506590e8d4da
-Step 17/25 : RUN python3.6 -m pip install scikit-learn==0.24.0
- ---> Using cache
- ---> 35909edf4b53
-Step 18/25 : RUN python3.6 -m pip install nltk==3.6.7
- ---> Using cache
- ---> aab1fc53312e
-Step 19/25 : RUN python3.6 -m pip install pandas==1.1.5
- ---> Using cache
- ---> 0736f1009639
-Step 20/25 : RUN ln -s /opt/spark-${SPARK_VERSION}-bin-hadoop2.7 ${SPARK_DIR}
- ---> Using cache
- ---> ec7b7f417c15
-Step 21/25 : ADD python/*  /opt/advm/
- ---> 9244d8938762
-Step 22/25 : RUN unzip ./opt/advm/TFIDF_logisticRegression.zip -d ./opt/advm
- ---> Running in 621cd2b61c8d
+ ---> 9f3bdae8224d
+Step 16/20 : ADD python/*  /opt/advm/
+ ---> 6209cdf56d1b
+Step 17/20 : RUN unzip ./opt/advm/TFIDF_logisticRegression.zip -d ./opt/advm
+ ---> Running in 545aa17b11b6
 Archive:  ./opt/advm/TFIDF_logisticRegression.zip
   inflating: ./opt/advm/TFIDF_logisticRegression.pkl  
-Removing intermediate container 621cd2b61c8d
- ---> fb2cef76d8e5
-Step 23/25 : ADD spark-manager.sh $SPARK_DIR/bin/spark-manager
- ---> 0ab31c8f4ec4
-Step 24/25 : WORKDIR ${SPARK_DIR}
- ---> Running in 5cb18f588b96
-Removing intermediate container 5cb18f588b96
- ---> caf334bfcd0a
-Step 25/25 : ENTRYPOINT [ "bin/spark-manager" ]
- ---> Running in 23de668c9e5a
-Removing intermediate container 23de668c9e5a
- ---> 74ed5200c2b4
-Successfully built 74ed5200c2b4
+Removing intermediate container 545aa17b11b6
+ ---> 0d0fce3958cd
+Step 18/20 : ADD spark-manager.sh $SPARK_DIR/bin/spark-manager
+ ---> f11f741ebb32
+Step 19/20 : WORKDIR ${SPARK_DIR}
+ ---> Running in 0a25c9d1ad5c
+Removing intermediate container 0a25c9d1ad5c
+ ---> ac8673eb3592
+Step 20/20 : ENTRYPOINT [ "bin/spark-manager" ]
+ ---> Running in 7ed358726cd1
+Removing intermediate container 7ed358726cd1
+ ---> 6931fbe04dee
+Successfully built 6931fbe04dee
 Successfully tagged advm:spark
