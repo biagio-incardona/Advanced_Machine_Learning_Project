@@ -93,6 +93,9 @@ echo "Kibana launched"
 xdg-open http://localhost:5601/ &
 
 sleep 10
+echo "Loading dashboard"
+curl -XPOST 10.0.100.52:5601/api/kibana/dashboards/import -H 'kbn-xsrf:true' -H 'Content-type:application/json' -d @./kibana/dashboard.json
+
 echo "starting Spark"
 docker run -e SPARK_ACTION=spark-submit-python -p 4040:4040 -it --network advm --name sparkSubmit advm:spark process.py "org.apache.spark:spark-streaming-kafka-0-8_2.11:2.4.5,org.elasticsearch:elasticsearch-hadoop:7.7.0"
 
