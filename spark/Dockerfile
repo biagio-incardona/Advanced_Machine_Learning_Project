@@ -28,6 +28,8 @@ RUN python3.6 -m pip install numpy==1.19.5
 RUN python3.6 -m spacy download en_core_web_sm
 RUN python3.6 -m pip install scikit-learn==0.24.0
 RUN python3.6 -m pip install nltk==3.6.7
+RUN python3.6 -m pip install pandas==1.1.5
+
 # Create Sym Link 
 RUN ln -s /opt/spark-${SPARK_VERSION}-bin-hadoop2.7 ${SPARK_DIR} 
 

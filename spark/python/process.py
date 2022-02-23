@@ -30,6 +30,7 @@ from collections import Counter
 from string import punctuation
 import TFIDF_Models as models
 import nltk
+import STClustering
 from nltk.stem import SnowballStemmer
 import Preprocess as ps
 import pickle
@@ -40,7 +41,7 @@ with open('/opt/advm/TFIDF_logisticRegression.pkl', 'rb') as file:
     model = pickle.load(file)
     
 sid = SentimentIntensityAnalyzer()
-
+clustering_model = STClustering.STClustering(r=75, gap_time = 5000)
 
 #if you've downloaded the medium version use
 nlp = spacy.load("en_core_web_sm")
@@ -110,6 +111,7 @@ def process(key, rdd):
         print("No Messages")
         return
     mex = twitch_message[0][0]
+    time = twitch_message[0][3]
     print(mex)
     mex2 = mex
     mex = mex.encode("ascii", "ignore")
@@ -150,6 +152,28 @@ def process(key, rdd):
         valueClass="org.elasticsearch.hadoop.mr.LinkedMapWritable",
         conf=es_write_conf
     )
+    time_gap_reached = clustering_model.insert(mex2, time)
+    if time_gap_reached == True:
+    	clusters = clustering_model.get_clusters()
+    	clust_sparkDf = spark.createDataFrame(clusters)
+    	clust_rdd = clust_sparkDf.rdd.map(lambda x:
+    		{
+    			'keyword' : x['cluster'],
+    			'weight' : x['weight'],
+    			'timestamp' : time
+    		}
+    	)
+    	clust_final_rdd = clust_rdd.map(json.dumps).map(lambda x: ('key',x))
+    	clust_final_rdd.saveAsNewAPIHadoopFile(
+    		path='-',
+    		outputFormatClass="org.elasticsearch.hadoop.mr.EsOutputFormat",
+        	keyClass="org.apache.hadoop.io.NullWritable",
+        	valueClass="org.elasticsearch.hadoop.mr.LinkedMapWritable",
+        	conf=es_write_clust
+    	)
+    #	for i in range(nrow(clusters)):
+    #		rowRdd = sc.
+    
     
     
 negations = {"isn't": "is not", "aren't": "are not", "wasn't": "was not", "weren't": "were not",
@@ -206,6 +230,7 @@ mapping = {
 from elasticsearch import Elasticsearch
 elastic_host="10.0.100.51"
 elastic_index="data"
+elastic_index_clustering = "clustering"
 elastic_document="_doc"
 elastic_port = '9200'
 elastic_is_json = "yes"
@@ -218,6 +243,13 @@ es_write_conf = {
  #   "mapred.reduce.tasks.speculative.execution": "false", #test
  #   "mapred.map.tasks.speculative.execution": "false", #test
 
+}
+
+es_write_clust = {
+	"es.nodes" : elastic_host,
+	"es.port" : elastic_port,
+	"es.resource" : '%s/%s' % (elastic_index_clustering, elastic_document),
+	"es.input.json" : elastic_is_json,
 }
 
 host = {
@@ -234,9 +266,19 @@ response = elastic.indices.create(
     ignore=400 # ignore 400 already exists code
 )
 
+cluster_response = elastic.indices.create(
+	index=elastic_index_clustering,
+	body=mapping,
+	ignore=400
+)
+
 if 'acknowledged' in response:
     if response['acknowledged'] == True:
         print ("INDEX MAPPING SUCCESS FOR INDEX:", response['index'])
+
+if 'acknowledged' in cluster_response:
+    if cluster_response['acknowledged'] == True:
+        print ("INDEX MAPPING SUCCESS FOR INDEX:", cluster_response['index'])
 
 # catch API error response
 elif 'error' in response:
