@@ -23,12 +23,7 @@ RUN python3.6 -V
 COPY get-pip.py .
 RUN python3.6 get-pip.py
 
-RUN python3.6 -m pip install pyspark==3.2.1 elasticsearch==7.7.0 kafka-python==2.0.2 vaderSentiment spaCy
-RUN python3.6 -m pip install numpy==1.19.5
-RUN python3.6 -m spacy download en_core_web_sm
-RUN python3.6 -m pip install scikit-learn==0.24.0
-RUN python3.6 -m pip install nltk==3.6.7
-RUN python3.6 -m pip install pandas==1.1.5
+RUN python3.6 -m pip install pyspark==3.2.1 elasticsearch==7.7.0 kafka-python==2.0.2 numpy==1.19.5 scikit-learn==0.24.0 nltk==3.6.7 pandas==1.1.5
 
 # Create Sym Link 
 RUN ln -s /opt/spark-${SPARK_VERSION}-bin-hadoop2.7 ${SPARK_DIR} 

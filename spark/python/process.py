@@ -16,16 +16,8 @@ from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
 import pyspark.sql.types as tp
 from pyspark.ml import Pipeline
-from pyspark.ml.feature import StringIndexer, OneHotEncoder, VectorAssembler
-from pyspark.ml.feature import StopWordsRemover, Word2Vec, RegexTokenizer
-from pyspark.ml.classification import LogisticRegression
 from pyspark.sql import Row
-from pyspark.ml.feature import HashingTF, IDF, Tokenizer
-from pyspark.ml.classification import NaiveBayes
-from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 import os
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer 
-import spacy
 from collections import Counter
 from string import punctuation
 import TFIDF_Models as models
@@ -40,14 +32,7 @@ model = None
 with open('/opt/advm/TFIDF_logisticRegression.pkl', 'rb') as file:
     model = pickle.load(file)
     
-sid = SentimentIntensityAnalyzer()
-clustering_model = STClustering.STClustering(r=75, gap_time = 5000)
-
-#if you've downloaded the medium version use
-nlp = spacy.load("en_core_web_sm")
-
-#if you've downloaded the largest version use
-#nlp = spacy.load("en_core_web_lg")
+clustering_model = STClustering.STClustering(r=0.75, gap_time = 5000)
 
 get_twitch_schema = tp.StructType([
     tp.StructField(name = 'username', dataType = tp.StringType(),  nullable = True),
@@ -58,9 +43,7 @@ get_twitch_schema = tp.StructType([
 ])
 
 def get_sentiment(text):
-    #value = sid.polarity_scores(text)
     value = model.predict_proba([text])
-    #value = value['compound']
     value = value[0][1]
     print(value)
     return value
@@ -87,15 +70,6 @@ def process(key, rdd):
     global spark
     print(key)
     print(rdd)
-#    twitch_chat = rdd.map(lambda key, value: json.loads(value)).map(
-#        lambda json_object:(
-#            json.loads(json_object["message"].encode("ascii", "ignore"))["message"],
-#            json.loads(json_object["message"].encode("ascii", "ignore"))["username"],
-#            float(json.loads(json_object["message"].encode("ascii", "ignore"))["engagement"]),
-#            long(json.loads(json_object["message"].encode("ascii", "ignore"))["timestamp"]),
-#            json.loads(json_object["message"].encode("ascii", "ignore"))["source"]
-#        )
-#    )
     twitch_chat = rdd.map(lambda value: json.loads(value[1])).map(
         lambda json_object:(
             json.loads(json_object["message"].encode("ascii", "ignore"))["message"],
@@ -171,8 +145,6 @@ def process(key, rdd):
         	valueClass="org.elasticsearch.hadoop.mr.LinkedMapWritable",
         	conf=es_write_clust
     	)
-    #	for i in range(nrow(clusters)):
-    #		rowRdd = sc.
     
     
     
@@ -182,7 +154,6 @@ negations = {"isn't": "is not", "aren't": "are not", "wasn't": "was not", "weren
                  "can't": "can not", "couldn't": "could not", "shouldn't": "should not", "mightn't": "might not",
                  "mustn't": "must not"}
 
-    # convert twitter emojis in twitch style emojis
 emojis = {':)': 'smile', ':-)': 'smile', ';d': 'wink', ':-E': 'vampire', ':(': 'sad',
               ':-(': 'sad', ':-<': 'sad', ':P': 'raspberry', ':O': 'surprised',
               ':-@': 'shocked', ':@': 'shocked', ':-$': 'confused',
