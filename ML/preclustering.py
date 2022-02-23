@@ -3,10 +3,9 @@ from nltk.stem import SnowballStemmer
 import Preprocess as ps
 from model_selection import load_dataset, resize
 import myTFIDF as mtfidf
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 
-class Kmeanclustering:
+class PreClustering:
     def main(self=None):
         path = "{BaseDir}/Advanced_Machine_Learning_Project/data/dataset.csv".format(BaseDir=BASE_DIR)
         columns = ["sentiment", "ids", "date", "flag", "user", "text"]
@@ -40,7 +39,7 @@ class Kmeanclustering:
         sbStem = SnowballStemmer("english", True)
         preprocess = ps.Preprocess(negations, emojis, regex_subs, sbStem)
         df = load_dataset(path, columns, final_columns)
-        df = resize(df, 50000, "sentiment", 4)
+        df = resize(df, 5000, "sentiment", 4)
         df = preprocess.df_pre_process(df, "text", "sentiment")
         df = df['text']
         ntf = mtfidf.myTFIDF(df)
@@ -49,4 +48,4 @@ class Kmeanclustering:
         return X, df
 
 
-Kmeanclustering.main()
+PreClustering.main()
