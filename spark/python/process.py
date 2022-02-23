@@ -16,20 +16,13 @@ from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
 import pyspark.sql.types as tp
 from pyspark.ml import Pipeline
-from pyspark.ml.feature import StringIndexer, OneHotEncoder, VectorAssembler
-from pyspark.ml.feature import StopWordsRemover, Word2Vec, RegexTokenizer
-from pyspark.ml.classification import LogisticRegression
 from pyspark.sql import Row
-from pyspark.ml.feature import HashingTF, IDF, Tokenizer
-from pyspark.ml.classification import NaiveBayes
-from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 import os
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer 
-import spacy
 from collections import Counter
 from string import punctuation
 import TFIDF_Models as models
 import nltk
+import STClustering
 from nltk.stem import SnowballStemmer
 import Preprocess as ps
 import pickle
@@ -39,14 +32,7 @@ model = None
 with open('/opt/advm/TFIDF_logisticRegression.pkl', 'rb') as file:
     model = pickle.load(file)
     
-sid = SentimentIntensityAnalyzer()
-
-
-#if you've downloaded the medium version use
-nlp = spacy.load("en_core_web_sm")
-
-#if you've downloaded the largest version use
-#nlp = spacy.load("en_core_web_lg")
+clustering_model = STClustering.STClustering(r=0.75, gap_time = 5000)
 
 get_twitch_schema = tp.StructType([
     tp.StructField(name = 'username', dataType = tp.StringType(),  nullable = True),
@@ -57,44 +43,15 @@ get_twitch_schema = tp.StructType([
 ])
 
 def get_sentiment(text):
-    #value = sid.polarity_scores(text)
     value = model.predict_proba([text])
-    #value = value['compound']
     value = value[0][1]
     print(value)
     return value
-
-
-def get_keyword(text):
-    result = []
-    pos_tag = ['PROPN', 'ADJ', 'NOUN'] # 1
-    doc = nlp(text.lower()) # 2
-    for token in doc:
-        # 3
-        if(token.text in nlp.Defaults.stop_words or token.text in punctuation):
-            continue
-        # 4
-        if(token.pos_ in pos_tag):
-            result.append(token.text)
-
-    back = [x for x in Counter(result).most_common(1)]       
-    if len(back) == 0:
-        return None 
-    return back[0][0]
 
 def process(key, rdd):
     global spark
     print(key)
     print(rdd)
-#    twitch_chat = rdd.map(lambda key, value: json.loads(value)).map(
-#        lambda json_object:(
-#            json.loads(json_object["message"].encode("ascii", "ignore"))["message"],
-#            json.loads(json_object["message"].encode("ascii", "ignore"))["username"],
-#            float(json.loads(json_object["message"].encode("ascii", "ignore"))["engagement"]),
-#            long(json.loads(json_object["message"].encode("ascii", "ignore"))["timestamp"]),
-#            json.loads(json_object["message"].encode("ascii", "ignore"))["source"]
-#        )
-#    )
     twitch_chat = rdd.map(lambda value: json.loads(value[1])).map(
         lambda json_object:(
             json.loads(json_object["message"].encode("ascii", "ignore"))["message"],
@@ -110,15 +67,12 @@ def process(key, rdd):
         print("No Messages")
         return
     mex = twitch_message[0][0]
+    time = twitch_message[0][3]
     print(mex)
     mex2 = mex
     mex = mex.encode("ascii", "ignore")
     mex2 = preprocessor.text_preprocess(mex2)
     sentiment = get_sentiment(mex2)
-    keyword = get_keyword(mex2)
-    if keyword is None:
-        print("Only emoticons not recognized")
-        return
 
     rowRdd = twitch_chat.map(lambda t:
         Row(
@@ -137,8 +91,7 @@ def process(key, rdd):
             'mex' : x['mex'],
             'engagement' : x['engagement'],
             'source' : x['source'],
-            'mex_sentiment' : sentiment,
-            'keyword' : keyword
+            'mex_sentiment' : sentiment
         }
     )
 
@@ -150,6 +103,26 @@ def process(key, rdd):
         valueClass="org.elasticsearch.hadoop.mr.LinkedMapWritable",
         conf=es_write_conf
     )
+    time_gap_reached = clustering_model.insert(mex2, time)
+    if time_gap_reached == True:
+    	clusters = clustering_model.get_clusters()
+    	clust_sparkDf = spark.createDataFrame(clusters)
+    	clust_rdd = clust_sparkDf.rdd.map(lambda x:
+    		{
+    			'keyword' : x['cluster'],
+    			'weight' : x['weight'],
+    			'timestamp' : time
+    		}
+    	)
+    	clust_final_rdd = clust_rdd.map(json.dumps).map(lambda x: ('key',x))
+    	clust_final_rdd.saveAsNewAPIHadoopFile(
+    		path='-',
+    		outputFormatClass="org.elasticsearch.hadoop.mr.EsOutputFormat",
+        	keyClass="org.apache.hadoop.io.NullWritable",
+        	valueClass="org.elasticsearch.hadoop.mr.LinkedMapWritable",
+        	conf=es_write_clust
+    	)
+    
     
     
 negations = {"isn't": "is not", "aren't": "are not", "wasn't": "was not", "weren't": "were not",
@@ -158,7 +131,6 @@ negations = {"isn't": "is not", "aren't": "are not", "wasn't": "was not", "weren
                  "can't": "can not", "couldn't": "could not", "shouldn't": "should not", "mightn't": "might not",
                  "mustn't": "must not"}
 
-    # convert twitter emojis in twitch style emojis
 emojis = {':)': 'smile', ':-)': 'smile', ';d': 'wink', ':-E': 'vampire', ':(': 'sad',
               ':-(': 'sad', ':-<': 'sad', ':P': 'raspberry', ':O': 'surprised',
               ':-@': 'shocked', ':@': 'shocked', ':-$': 'confused',
@@ -206,6 +178,7 @@ mapping = {
 from elasticsearch import Elasticsearch
 elastic_host="10.0.100.51"
 elastic_index="data"
+elastic_index_clustering = "clustering"
 elastic_document="_doc"
 elastic_port = '9200'
 elastic_is_json = "yes"
@@ -218,6 +191,13 @@ es_write_conf = {
  #   "mapred.reduce.tasks.speculative.execution": "false", #test
  #   "mapred.map.tasks.speculative.execution": "false", #test
 
+}
+
+es_write_clust = {
+	"es.nodes" : elastic_host,
+	"es.port" : elastic_port,
+	"es.resource" : '%s/%s' % (elastic_index_clustering, elastic_document),
+	"es.input.json" : elastic_is_json,
 }
 
 host = {
@@ -234,9 +214,19 @@ response = elastic.indices.create(
     ignore=400 # ignore 400 already exists code
 )
 
+cluster_response = elastic.indices.create(
+	index=elastic_index_clustering,
+	body=mapping,
+	ignore=400
+)
+
 if 'acknowledged' in response:
     if response['acknowledged'] == True:
         print ("INDEX MAPPING SUCCESS FOR INDEX:", response['index'])
+
+if 'acknowledged' in cluster_response:
+    if cluster_response['acknowledged'] == True:
+        print ("INDEX MAPPING SUCCESS FOR INDEX:", cluster_response['index'])
 
 # catch API error response
 elif 'error' in response:
