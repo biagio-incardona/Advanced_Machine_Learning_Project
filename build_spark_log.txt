@@ -44,19 +44,22 @@ Step 15/20 : RUN ln -s /opt/spark-${SPARK_VERSION}-bin-hadoop2.7 ${SPARK_DIR}
  ---> Using cache
  ---> 9f3bdae8224d
 Step 16/20 : ADD python/*  /opt/advm/
- ---> Using cache
- ---> 6209cdf56d1b
+ ---> ba92af31a6a9
 Step 17/20 : RUN unzip ./opt/advm/TFIDF_logisticRegression.zip -d ./opt/advm
- ---> Using cache
- ---> 0d0fce3958cd
+ ---> Running in f3ec1170b621
+Archive:  ./opt/advm/TFIDF_logisticRegression.zip
+  inflating: ./opt/advm/TFIDF_logisticRegression.pkl  
+Removing intermediate container f3ec1170b621
+ ---> 116c9954d097
 Step 18/20 : ADD spark-manager.sh $SPARK_DIR/bin/spark-manager
- ---> Using cache
- ---> f11f741ebb32
+ ---> d277770a67a2
 Step 19/20 : WORKDIR ${SPARK_DIR}
- ---> Using cache
- ---> ac8673eb3592
+ ---> Running in 40e99a90154f
+Removing intermediate container 40e99a90154f
+ ---> 398ec4a3f2f6
 Step 20/20 : ENTRYPOINT [ "bin/spark-manager" ]
- ---> Using cache
- ---> 6931fbe04dee
-Successfully built 6931fbe04dee
+ ---> Running in 59204e5d1260
+Removing intermediate container 59204e5d1260
+ ---> 631e1bcd43a5
+Successfully built 631e1bcd43a5
 Successfully tagged advm:spark

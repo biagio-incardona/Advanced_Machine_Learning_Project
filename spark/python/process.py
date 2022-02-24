@@ -111,7 +111,7 @@ def process(key, rdd):
     		{
     			'keyword' : x['cluster'],
     			'weight' : x['weight'],
-    			'timestamp' : time
+    			'timestamp' : datetime.timestamp(datetime.now(tz = None)) * 1000
     		}
     	)
     	clust_final_rdd = clust_rdd.map(json.dumps).map(lambda x: ('key',x))
