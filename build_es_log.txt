@@ -1,11 +1,56 @@
 Sending build context to Docker daemon   2.56kB
 Step 1/3 : FROM docker.elastic.co/elasticsearch/elasticsearch:7.7.0
+7.7.0: Pulling from elasticsearch/elasticsearch
+86dbb57a3083: Pulling fs layer
+2b5d7fba0568: Pulling fs layer
+441e4ff55d6b: Pulling fs layer
+d5bae169186d: Pulling fs layer
+0bd94a0e499c: Pulling fs layer
+0459ad1587bf: Pulling fs layer
+1ccf419e016d: Pulling fs layer
+4cc72f3ea33a: Pulling fs layer
+74d1ead8433b: Pulling fs layer
+d5bae169186d: Waiting
+0bd94a0e499c: Waiting
+0459ad1587bf: Waiting
+1ccf419e016d: Waiting
+4cc72f3ea33a: Waiting
+74d1ead8433b: Waiting
+2b5d7fba0568: Verifying Checksum
+2b5d7fba0568: Download complete
+d5bae169186d: Verifying Checksum
+d5bae169186d: Download complete
+441e4ff55d6b: Verifying Checksum
+441e4ff55d6b: Download complete
+0459ad1587bf: Verifying Checksum
+0459ad1587bf: Download complete
+1ccf419e016d: Verifying Checksum
+1ccf419e016d: Download complete
+4cc72f3ea33a: Verifying Checksum
+4cc72f3ea33a: Download complete
+74d1ead8433b: Verifying Checksum
+74d1ead8433b: Download complete
+86dbb57a3083: Verifying Checksum
+86dbb57a3083: Download complete
+86dbb57a3083: Pull complete
+2b5d7fba0568: Pull complete
+441e4ff55d6b: Pull complete
+d5bae169186d: Pull complete
+0bd94a0e499c: Verifying Checksum
+0bd94a0e499c: Download complete
+0bd94a0e499c: Pull complete
+0459ad1587bf: Pull complete
+1ccf419e016d: Pull complete
+4cc72f3ea33a: Pull complete
+74d1ead8433b: Pull complete
+Digest: sha256:b4ec018c974d23a796b1d17ddec3863e4e6deff76d25f58027c45b7a697089dc
+Status: Downloaded newer image for docker.elastic.co/elasticsearch/elasticsearch:7.7.0
  ---> 7ec4f35ab452
 Step 2/3 : MAINTAINER Biagio Incardona
- ---> Using cache
- ---> 854fa6ed5d88
+ ---> Running in cba42ced5433
+Removing intermediate container cba42ced5433
+ ---> 48c096f703ca
 Step 3/3 : ADD elastic.sh /
- ---> Using cache
- ---> 8eb0f3ad934a
-Successfully built 8eb0f3ad934a
+ ---> df1072f1c349
+Successfully built df1072f1c349
 Successfully tagged advm:es
