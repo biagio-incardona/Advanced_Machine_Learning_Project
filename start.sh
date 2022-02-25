@@ -60,7 +60,7 @@ echo "starting Python"
 
 #docker container rm Python >/dev/null
 
-docker run --network advm --ip 10.0.100.10 --name Python -e CHANNEL_TW=$tc -e CHANNEL_YT=$yc advm:python >/dev/null &
+docker run --network advm --ip 10.0.100.10 --name Python -e CHANNEL_TW=$tc advm:python >/dev/null &
 
 echo "starting ElasticSearch"
 
