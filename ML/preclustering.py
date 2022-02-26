@@ -39,7 +39,7 @@ class PreClustering:
         sbStem = SnowballStemmer("english", True)
         preprocess = ps.Preprocess(negations, emojis, regex_subs, sbStem)
         df = load_dataset(path, columns, final_columns)
-        df = resize(df, 5000, "sentiment", 4)
+        df = resize(df, 50000, "sentiment", 4)
         df = preprocess.df_pre_process(df, "text", "sentiment")
         df = df['text']
         ntf = mtfidf.myTFIDF(df)
