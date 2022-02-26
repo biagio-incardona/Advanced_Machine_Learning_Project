@@ -106,7 +106,8 @@ def apply_random_search(pip, params_grid, X_train, Y_train, results_file_name):
     # for i in range(10):
     trys = RandomizedSearchCV(pip, param_distributions=params_grid, n_iter=1, n_jobs=6, return_train_score=True)
     search = trys.fit(X_train, Y_train)
-    save_results(search, results_file_name)
+    print(search)
+    # save_results(search, results_file_name)
 
 
 def first_screening(df):
@@ -278,10 +279,10 @@ def main():
     sbStem = SnowballStemmer("english", True)
     preprocess = ps.Preprocess(negations, emojis, regex_subs, sbStem)
     df = load_dataset(path, columns, final_columns)
-    # df = resize(df, 50000, "sentiment", 4)
+    df = resize(df, 50, "sentiment", 4)
     df = preprocess.df_pre_process(df, "text", "sentiment")
-    # first_screening(df)
-    second_screening(df)
+    first_screening(df)
+    # second_screening(df)
 
 
 

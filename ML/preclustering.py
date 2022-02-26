@@ -1,7 +1,7 @@
 from settings import BASE_DIR
 from nltk.stem import SnowballStemmer
-import Preprocess as ps
-from model_selection import load_dataset, resize
+import ML.Preprocess as ps
+from ML.model_selection import load_dataset, resize
 import myTFIDF as mtfidf
 
 
