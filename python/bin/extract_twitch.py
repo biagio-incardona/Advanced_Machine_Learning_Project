@@ -71,7 +71,7 @@ def getAndSend(sock, channel, address, port):
 
 def connectToTwitch(channel):
     print('connecting to %s channel' % channel)
-    oauth = 'oauth:xx7vu4ic9sflibo2mqgb3y8wjw0z3i'
+    oauth = 'oauth:xxxxxxxxxxxx'
     server = 'irc.chat.twitch.tv'
     port = 6667
     nickname = 'advm_proj'
